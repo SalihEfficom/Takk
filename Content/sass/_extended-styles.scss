@@ -1,0 +1,145 @@
+//margin padding ...
+$m-m: 8px;
+$m-xs: $m-m/4;
+$m-s: $m-m/2;
+$m-l: $m-m * 2;
+$m-xl: $m-m * 3;
+$m-xxl: $m-m * 4;
+$m-xxxl: $m-m * 6;
+$m-4xl: $m-m * 8;
+
+///////////////////////
+////    text
+
+.text-align-right {
+  text-align: right;
+}
+
+.line-height-1 {
+  line-height: 1 !important;
+}
+
+$text-xxs: 0.5rem;
+$text-xs: 0.625rem;
+$text-s: 0.75rem;
+$text-m: 0.875rem;
+$text-l: 1rem;
+$text-xl: 1.125rem;
+$text-xxl: 1.375rem;
+$text-xxxl: 2.5rem;
+$text-xxxxl: 3.5rem;
+$text-big: 4.375rem;
+
+.text-xxs {
+  font-size: $text-xxs !important;
+}
+
+.text-xs {
+  font-size: $text-xs !important;
+}
+
+.text-s {
+  font-size: $text-s !important;
+}
+
+.text-m {
+  font-size: $text-m !important;
+}
+
+.text-l {
+  font-size: $text-l !important;
+}
+
+.text-xl {
+  font-size: $text-xl !important;
+}
+
+.text-xxl {
+  font-size: $text-xxl !important;
+}
+
+.text-xxxl {
+  font-size: $text-xxxl !important;
+}
+
+.text-xxxxl {
+  font-size: $text-xxxxl !important;
+}
+
+.text-big {
+  font-size: $text-big !important;
+}
+
+//flex --> "displayFlex - direction - justifyContent - alignitems
+//direction par default = row
+
+.f-sa {
+  display: flex !important;
+  justify-content: space-around;
+}
+
+.fc-sa {
+  display: flex !important;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.f-sb {
+  display: flex !important;
+  justify-content: space-between;
+}
+
+.fc-sb {
+  display: flex !important;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.f-sa-c {
+  display: flex !important;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.fc-sa-c {
+  display: flex !important;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.f-sb-c {
+  display: flex !important;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.fc-sb-c {
+  display: flex !important;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.fc-fs-c {
+  display: flex !important;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.fc-fs {
+  display: flex !important;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.position-offset-rt {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+}
+
+.no-bg {
+  background: none !important;
+}

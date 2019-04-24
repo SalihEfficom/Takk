@@ -1,0 +1,216 @@
+#titre_commu{
+    position: absolute;
+    margin-top: -13%;
+    margin-left: 5%;
+    color: white;
+    -webkit-text-stroke: 1px;
+    -webkit-text-stroke-color: black;
+    font-size: 2.6em;
+}
+
+.photo_profil_actu{
+    width: 100px;
+    margin-left: 75%;
+    margin-top: -25%;
+}
+
+#profil
+{
+    width: 105%;
+    height: 285px;
+    margin-top: -8px;
+    margin-left: -8px;
+    background-color: #2699FB;
+}
+
+#champs_connexion
+{
+    margin:auto;
+    margin-top:5%;
+    margin-left:10%;
+    text-align: center;
+}
+
+input{
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    border-radius: 50px;
+}
+
+.input_co{
+    height: 30px;
+    width: 260px;
+    border-color: #BCE0FD;
+}
+
+#radio_co{
+    margin-top: 20px;
+    margin-left: 5%;
+}
+
+#bouton_co{
+    background-color: #2699FB;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    width: 260px;
+    padding:10px;
+    -webkit-border-radius:40px/24px;
+    -moz-border-radius:40px/24px;
+    border-radius:27px/24px;
+    height: 45px;
+    margin-top: 10px;
+}
+
+#bouton_co_fb{
+    background-color: white;
+    border-color: #2699FB;
+    color: #2699FB;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    width: 260px;
+    padding:10px;
+    background-color:white;
+    -webkit-border-radius:40px/24px;
+    -moz-border-radius:40px/24px;
+    border-radius:27px/24px;
+    height: 45px;
+    margin-top: 10px;
+}
+
+#bouton_ins{
+    background-color: #2699FB;
+    border-color: white;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 4px 2px;
+    cursor: pointer;
+    width: 135px;
+    padding:10px;
+    -webkit-border-radius:40px/24px;
+    -moz-border-radius:40px/24px;
+    border-radius:27px/24px;
+    height: 40px;
+    margin-top: 47%;
+}
+
+#photo_profil{
+    width: 200px;
+}
+
+.input_text {
+    width: 100%;
+    /*padding: 12px 20px;*/
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: none;
+    border-bottom: 4px solid #BCE0FD;
+    -webkit-border-radius: 0px;
+}
+
+.bloc_ins{
+    padding-top: 22px;
+}
+
+.label_ins{
+    color:#2699FB;
+}
+
+.input_ins{
+    border: none;
+    float: right;
+}
+
+#valider_ins{
+    background-color: #2699FB;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    width: 260px;
+    padding:10px;
+    -webkit-border-radius:40px/24px;
+    -moz-border-radius:40px/24px;
+    border-radius:27px/24px;
+    height: 45px;
+    margin-top: 25px;
+    margin-left: 20%;
+}
+
+#card{
+    margin-top: 20px;
+}
+
+.card-header.card-header-actu{
+    background-image: none;
+    background-color: white;
+    border-bottom: none;
+}
+
+.img_commu{
+    width: 250px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    text-align: center;
+}
+
+/* ajoutés par salih */
+
+.displayB{
+    display: block;
+}
+
+#message {
+    display:none;
+    background: #f1f1f1;
+    color: #000;
+    position: relative;
+    padding: 20px;
+    margin-top: 10px;
+  }
+  
+  #message p {
+    padding: 10px 35px;
+    font-size: 18px;
+  }
+  
+  /* Add a green text color and a checkmark when the requirements are right */
+  .valid {
+    color: green;
+  }
+  
+  .valid:before {
+    position: relative;
+    left: -35px;
+    content: "✔";
+  }
+  
+  /* Add a red text color and an "x" when the requirements are wrong */
+  .invalid {
+    color: red;
+  }
+  
+  .invalid:before {
+    position: relative;
+    left: -35px;
+    content: "✖";
+  }
+

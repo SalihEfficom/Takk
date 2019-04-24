@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Communautés</title>
+    <link rel="stylesheet" href="../Content/site.css">
+    <link rel="stylesheet" href="../Content/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/css/swiper.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body onload="getMessage()">
+<!---------------------------------------------------------------------------------->
+<div data-include="./comp/menu.html"></div>
+<img src="../Content/img/mecano.jpg" class="img_commu" style="width: 100%;height: 130px;" alt="">
+<span id="titre_commu">Les mécanos de Five</span>
+
+<!-- Swiper -->
+<div class="tabs-name">
+    <a href="#slide1">Fil d'actu</a>
+    <a href="#slide2">Membres</a>
+</div>
+<div class="swiper-container">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide " data-hash="slide1">
+            <div class="commu-cards-container">
+                <div class="card">
+                    <div class="card-header" style="background-image: none;">
+                        <span class="card-title">Pierre Durand</span>
+                        <img src="../Content/img/user.png" class="photo_profil_actu" alt="">
+                    </div>
+                    <div class="card-content">
+                        <div class="commu-infos">
+                            <span>Bonjour, je m'appelle alex j'ai 25 ans. Je suis suis plombier de métier et bricoleur dans l'âme. Je peux m'atteler à tout bricolage du quotidien</span>
+                        </div>
+                        <div class="commu-desc" >
+                            <span id="bloc1"></span>
+                        </div>
+                        <div class="commu-keywords">
+                            #plombier #bricolage #jardinage
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="commu-cards-container">
+                <div class="card">
+                    <div class="card-header" style="background-image: none;">
+                        <span class="card-title">Pierre Durand</span>
+                        <img src="../Content/img/user.png" class="photo_profil_actu" alt="">
+                    </div>
+                    <div class="card-content">
+                        <div class="commu-infos">
+                            <span>Bonjour, je m'appelle alex j'ai 25 ans. Je suis suis plombier de métier et bricoleur dans l'âme. Je peux m'atteler à tout bricolage du quotidien</span>
+                        </div>
+                        <div class="commu-desc" >
+                            <span id="bloc3"></span>
+                        </div>
+                        <div class="commu-keywords">
+                            #plombier #bricolage #jardinage
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="swiper-slide" data-hash="slide2">
+            <div class="commu-cards-container">
+                <div class="card" id="card">
+                    <div class="card-header card-header-actu">
+                            <span class="card-title card-title-actu" style="color: #0054AA;">
+                                Pierre Durand
+                            </span>
+                        <img src="../Content/img/drake.png" class="photo_profil_actu" alt="">
+                    </div>
+                    <div class="card-content">
+                        <div class="commu-infos">
+                            <span>Bonjour, je m'appelle alex j'ai 25 ans. Je suis plombier de métier et bricoleur dans l'âme. Je peux m'atteler à tout bricolage du quotidien</span>
+                        </div>
+                        <div class="commu-desc" >
+                            <span id="bloc2"></span>
+
+                        </div>
+                        <div class="commu-keywords">
+                            #plombier #bricolage #jardinage
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="commu-cards-container">
+                <div class="card" id="card">
+                    <div class="card-header card-header-actu">
+                            <span class="card-title card-title-actu" style="color: #0054AA;">
+                                Pierre Durand
+                            </span>
+                        <img src="../Content/img/drake.png" class="photo_profil_actu" alt="">
+                    </div>
+                    <div class="card-content">
+                        <div class="commu-infos">
+                            <span>Bonjour, je m'appelle alex j'ai 25 ans. Je suis plombier de métier et bricoleur dans l'âme. Je peux m'atteler à tout bricolage du quotidien</span>
+                        </div>
+                        <div class="commu-desc" >
+                            <span id="bloc4"></span>
+
+                        </div>
+                        <div class="commu-keywords">
+                            #plombier #bricolage #jardinage
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Add Scrollbar -->
+    <div class="swiper-scrollbar"></div>
+</div>
+
+
+
+<!---------------------------------------------------------------------------------->
+<!-- Swiper JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/js/swiper.js"></script>
+<script src="../Script/script.js"></script>
+<script src="../Script/commu.js"></script>
+</body>
+</html>
