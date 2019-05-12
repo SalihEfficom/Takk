@@ -26,6 +26,22 @@ echo $_SESSION['username'];
     <script type="text/javascript" src="../Script/fonctionxmlhttp.js"></script>
     <script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js"></script>
     <script src="../Script/commu_carte.js"></script>
+    
+    <script type="text/javascript">
+        function request() {
+            var xhr = getXMLHttpRequest();
+
+            var nom = encodeURIComponent(document.getElementById("nom").value);
+            var description = encodeURIComponent(document.getElementById("description").value);
+            var motcle = encodeURIComponent(document.getElementById("motcle").value);
+            var ville = encodeURIComponent(document.getElementById("ville").value);
+
+            xhr.open("GET", "../php/ajoutCommu.php?nom="+nom+"&description="+description+"&motcle="+motcle+"&ville="+ville, true);
+            xhr.send(null);
+
+        }
+
+    </script>
 
 </head>
 <body>
