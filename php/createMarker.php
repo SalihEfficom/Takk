@@ -12,7 +12,7 @@ header("Access-Control-Allow-Origin: *");
 
 $mysqli = new mysqli("localhost", "root", "", "takk");
 
-$result = $mysqli->query("SELECT ville FROM communaute");
+$result = $mysqli->query("SELECT * FROM communaute");
 $v = array();
 while($row=mysqli_fetch_array($result)){
     $v[] = $row;
