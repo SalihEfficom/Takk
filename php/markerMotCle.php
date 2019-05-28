@@ -13,7 +13,7 @@ header("Access-Control-Allow-Origin: *");
 $input_motcle = (isset($_GET["motcle"])) ? $_GET["motcle"] : NULL;
 $mysqli = new mysqli("localhost", "root", "", "takk");
 
-$result = $mysqli->query("SELECT ville FROM communaute where motcle like '%".$input_motcle."%'");
+$result = $mysqli->query("SELECT * FROM communaute where motcle like '%".$input_motcle."%'");
 $v = array();
 while($row=mysqli_fetch_array($result)){
     $v[] = $row;

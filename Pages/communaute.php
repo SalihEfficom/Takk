@@ -6,7 +6,7 @@ if (!isset($_SESSION['username']))
     header("Location: inscription.php");
     exit();
 }
-echo $_SESSION['username']; 
+echo $_SESSION['username'];
 ?>
 <!doctype html>
 <html lang="fr">
@@ -26,7 +26,7 @@ echo $_SESSION['username'];
     <script type="text/javascript" src="../Script/fonctionxmlhttp.js"></script>
     <script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js"></script>
     <script src="../Script/commu_carte.js"></script>
-    
+
     <script type="text/javascript">
         function request() {
             var xhr = getXMLHttpRequest();
@@ -102,7 +102,6 @@ echo $_SESSION['username'];
                 <div class="join-map" id="map"></div>
                 <form method="post" action="" class="recherche_carte">
                     <input type="search" placeholder="Communauté" id="input_commu"
-                           onfocusout="searchMotCle()"/>
                     <input type="search" placeholder="Ville" id="input_ville" onfocus="searchVille()"
                            onfocusout="zoomVille(this.value)"/>
                     <button class="btn btn-primary"><i class="mdi mdi-map-marker"></i></button>

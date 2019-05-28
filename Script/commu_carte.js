@@ -44,8 +44,6 @@ function initMap() {
     });
 }
 
-
-
 function searchVille(){
     var inputVille = document.getElementById('input_ville');
     var options = {
@@ -83,23 +81,14 @@ function markerVille(geocoder,myfunc) {
                     newAddress = results[0].geometry.location;
                     latlng = new google.maps.LatLng(parseFloat(newAddress.lat()), parseFloat(newAddress.lng()));
                     geoVille = results[0].address_components[0].short_name;
+                    console.log(nom[i]);
 
                     myfunc(latlng, geoVille, nom[i], desc[i], mot[i]);
-                    // markers.push(createMarker(latlng, geoVille, nom[i], desc[i], mot[i]));
-
                 }
-                    // for (var x=0; x<9; x++) {
-                    //     markers.push(createMarker(latlng, geoVille, nom[x], desc[x], mot[x]));
-                    // }
-
             });
-
-
         }
     }
 }
-
-
 
 function createMarker(latlng,ville,nom,desc,mot) {
     // console.log(nom);
@@ -115,10 +104,12 @@ function createMarker(latlng,ville,nom,desc,mot) {
             mot: mot,
             map: map
         });
+
     // }
 }
 
 function onMarkerClick() {
+    console.log('test');
     var m = this;
     console.log(m.nom);
     infowindow.setContent( m.nom+"<br />"+m.ville+"<br />"+m.desc+"<br />"+m.mot);
@@ -145,7 +136,6 @@ function createMarkerMotCle(latlng,ville,nom,desc,mot) {
     markers.push(markerCle);
 
     google.maps.event.addListener(markerCle, 'click', onMarkerClick);
-
 }
 
 function searchMotCle(){
