@@ -16,8 +16,8 @@ echo $_SESSION['username'];
 </head>
 
 <body>
-    <form action="php/pdo/disconnect.php" method="post">
-        <input type="submit" value="Se deconnecter">
-    </form>
+<!--    <form action="php/pdo/disconnect.php" method="post">-->
+<!--        <input type="submit" value="Se deconnecter">-->
+<!--    </form>-->
 </body>
 </html>

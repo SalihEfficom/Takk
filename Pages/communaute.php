@@ -6,7 +6,7 @@ if (!isset($_SESSION['username']))
     header("Location: inscription.php");
     exit();
 }
-echo $_SESSION['username']; 
+//echo $_SESSION['username'];
 ?>
 <!doctype html>
 <html lang="fr">
@@ -45,9 +45,9 @@ echo $_SESSION['username'];
 
 </head>
 <body>
-<form action="../php/pdo/disconnect.php" method="post">
-    <input type="submit" value="Se deconnecter">
-</form>
+<!--<form action="../php/pdo/disconnect.php" method="post">-->
+<!--    <input type="submit" value="Se deconnecter">-->
+<!--</form>-->
 <!---------------------------------------------------------------------------------->
 
 <!-- <div data-include="../comp/menu.html"></div> -->
