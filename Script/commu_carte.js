@@ -40,8 +40,10 @@ function initMap() {
         });
         google.maps.event.addListener(marker, 'click', onMarkerClick);
         markers.push(marker);
-
     });
+
+    getCommu();
+
 }
 
 function searchVille(){
@@ -177,5 +179,13 @@ function setMapOnAll(map) {
     for (var i = 0; i < markers.length; i++) {
         markers[i].setMap(map);
     }
+}
+
+function getCommu(){
+    var xhr = new XMLHttpRequest();
+
+    xhr.open("GET", "../php/getCommu.php?", true);
+    xhr.send();
+
 }
 

@@ -6,6 +6,7 @@ if ((isset($_POST['mail']) && !empty($_POST['mail'])) && (isset($_POST['pwd']) &
     
     $log = $_POST['mail'];
     $pwd = $_POST['pwd'];
+
     $checkAuth = checkAuth($log,$pwd);
 
 

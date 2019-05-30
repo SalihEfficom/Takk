@@ -120,49 +120,7 @@ echo $_SESSION['username'];
                              style="background-image: url('../Content/img/mecano.jpg')"></div>
                         <div class="circle-img" style="background-image: url('../Content/img/mecano.jpg')">
                         </div>
-                        <span class="card-title">
-                            Les mécanos de fives
-                        </span>
-                    </div>
-                    <div class="card-content">
-                        <button class="btn btn-link">GÉRER</button>
-                    </div>
-                </div>
-                <div class="card blur-card">
-                    <div class="card-header">
-                        <div class="blur-img h-100 w-100"
-                             style="background-image: url('../Content/img/mecano.jpg')"></div>
-                        <div class="circle-img" style="background-image: url('../Content/img/mecano.jpg')">
-                        </div>
-                        <span class="card-title">
-                            Les mécanos de fives
-                        </span>
-                    </div>
-                    <div class="card-content">
-                        <button class="btn btn-link">GÉRER</button>
-                    </div>
-                </div>
-                <div class="card blur-card">
-                    <div class="card-header">
-                        <div class="blur-img h-100 w-100"
-                             style="background-image: url('../Content/img/mecano.jpg')"></div>
-                        <div class="circle-img" style="background-image: url('../Content/img/mecano.jpg')">
-                        </div>
-                        <span class="card-title">
-                            Les mécanos de fives
-                        </span>
-                    </div>
-                    <div class="card-content">
-                        <button class="btn btn-link">GÉRER</button>
-                    </div>
-                </div>
-                <div class="card blur-card">
-                    <div class="card-header">
-                        <div class="blur-img h-100 w-100"
-                             style="background-image: url('../Content/img/mecano.jpg')"></div>
-                        <div class="circle-img" style="background-image: url('../Content/img/mecano.jpg')">
-                        </div>
-                        <span class="card-title">
+                        <span id='commu' class="card-title">
                             Les mécanos de fives
                         </span>
                     </div>
