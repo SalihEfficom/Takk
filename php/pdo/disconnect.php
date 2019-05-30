@@ -1,11 +1,11 @@
 <?php
 session_start();
 
-unset($_SESSION['user']);
+session_unset();
 
 session_destroy();
 
-header("Location: ../../Pages/inscription.php");
+header("Location: ../../Pages/inscription.php#slide-connexion");
 
 
 ?>

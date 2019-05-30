@@ -1,12 +1,18 @@
 <?php
+include '../php/pdo/getInfoMembre.php';
+include '../php/pdo/dbconfig.php';
 session_start();
 
-if (!isset($_SESSION['user']))
+if (!isset($_SESSION['mail']) || !isset($_SESSION['password']) )
 {
-    header("Location: inscription.php");
+    header("Location: inscription.php#slide-connexion");
     exit();
 }
-print_r($_SESSION['user']); 
+
+$getInfoUser = getInfoMembre($_SESSION['mail'],$_SESSION['password']);
+
+print_r($getInfoUser);
+
 ?>
 <!doctype html>
 <html lang="fr">

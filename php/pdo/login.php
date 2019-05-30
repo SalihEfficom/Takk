@@ -3,6 +3,7 @@ session_start();
 include 'checkAuth.php';
 include 'getInfoMembre.php';
 
+
 if ((isset($_POST['mail']) && !empty($_POST['mail'])) && (isset($_POST['pwd']) && isset($_POST['pwd']))) {
     
     $log = $_POST['mail'];
@@ -13,16 +14,21 @@ if ((isset($_POST['mail']) && !empty($_POST['mail'])) && (isset($_POST['pwd']) &
     
     if ($checkAuth) {
 
-        $getUsersInfo = getInfoMembre($log,$pwd);
+            // die;
         // var_dump($getUsersInfo);die;
-        $nom = $getUsersInfo['nom'];
-        $prenom = $getUsersInfo['prenom'];
-        $mail = $getUsersInfo['mail'];
-        $dateNaiss = $getUsersInfo['dateNaiss'];
-        $ville = $getUsersInfo['ville'];
+        // $nom = $getUsersInfo['nom'];
+        // $prenom = $getUsersInfo['prenom'];
+        // $mail = $getUsersInfo['mail'];
+        // $dateNaiss = $getUsersInfo['dateNaiss'];
+        // $ville = $getUsersInfo['ville'];
+        // $id = $getUsersInfo['id'];
 
-        $user = array( 'nom' => $nom , 'mail' => $log , 'prenom' => $prenom, 'dateNaiss' => $dateNaiss, 'ville' => $ville);
-        $_SESSION["user"] = $user;
+        $_SESSION["mail"] = $_POST['mail'];
+        $_SESSION["password"] = $_POST['pwd'];
+        
+
+        // $user = array( 'nom' => $nom , 'mail' => $log , 'prenom' => $prenom, 'dateNaiss' => $dateNaiss, 'ville' => $ville, 'id' => $id);
+        // $_SESSION["user"] = $user;
         header("location: ../../Pages/communaute.php");
         exit();
     } else {
@@ -38,9 +44,6 @@ if ((isset($_POST['mail']) && !empty($_POST['mail'])) && (isset($_POST['pwd']) &
     header("location: ../../Pages/inscription.php");
     exit();
 }
-
-
-
 
 
 ?>
