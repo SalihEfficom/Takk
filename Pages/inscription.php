@@ -31,12 +31,12 @@ session_start();
             <form id="myForm"  class=" d-flex flex-column mt-5">
                 <input class="in mb-3" type="text" name="name" id="name" placeholder="Nom">
                 <input class="mb-3" type="text" name="firstname" id="firstname" placeholder="Prénom">
-                <input class="mb-3" type="date" name="date" id="date" placeholder="Date de naissance">
+                <input class="mb-3 btn btn-outline-primary" type="date" name="date" id="date" placeholder="Date de naissance">
                 <input class="mb-3" type="text" name="city" id="city" placeholder="Ville">
                 <input class="mb-3" type="text" name="mail" id="mail" placeholder="Mail">
                 <input class="mb-3" type="password" name="pwd" required title="Le champs de mot de passe doit contenir ..." id="pwd" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}">
 
-                <input type="button" value="Se connecter" onclick="verifySubsribe(readData);">
+                <input type="button" class="btn btn-primary" value="S'inscrire" onclick="verifySubsribe(readData);">
                 <div id="message">
                     <h3>Le mot de passe doit contenir:</h3>
                     <p id="minuscule" class="invalid">Une lettre <b>minuscule</b></p>

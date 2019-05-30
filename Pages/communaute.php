@@ -1,12 +1,11 @@
 <?php
 session_start();
-
 if (!isset($_SESSION['username']))
 {
     header("Location: inscription.php");
     exit();
 }
-echo $_SESSION['username'];
+//echo $_SESSION['username'];
 ?>
 <!doctype html>
 <html lang="fr">
@@ -45,12 +44,15 @@ echo $_SESSION['username'];
 
 </head>
 <body>
-<form action="../php/pdo/disconnect.php" method="post">
-    <input type="submit" value="Se deconnecter">
-</form>
+<!--<form action="../php/pdo/disconnect.php" method="post">-->
+<!--    <input type="submit" value="Se deconnecter">-->
+<!--</form>-->
 <!---------------------------------------------------------------------------------->
 
 <!-- <div data-include="../comp/menu.html"></div> -->
+<?php
+include '../Components/menu.php';
+?>
 
 <!-- Swiper -->
 <div class="tabs-name">
@@ -60,12 +62,14 @@ echo $_SESSION['username'];
 <div class="swiper-container">
     <div class="swiper-wrapper">
         <div class="swiper-slide " data-hash="slide1">
-            <div style="display: none;" class="join-list-view">
-                <div class="search-container">
-                    <input type="text" class="keywords">
-                    <input type="text" class="city">
-                    <button class="btn btn-primary"><i class="mdi mdi-map-marker"></i></button>
-                </div>
+            <form method="post" action="" class="search-container recherche_carte">
+                <input type="search" placeholder="Recherche" id="input_commu" onkeypress="if (event.keyCode==13){searchMotCle();}" />
+                <input type="search" placeholder="Ville" id="input_ville" onfocus="searchVille()"
+                       onfocusout="zoomVille(this.value)" class="city"/>
+            </form>
+            <button class="btn btn-primary" id="change-view-btn"><i class="mdi mdi-map-marker"></i></button>
+
+            <div id="join-list-view" class="visible">
                 <div class="grid-cards-container gtc300 commu-cards-container">
 
                     <div class="card commu-card">
@@ -98,14 +102,14 @@ echo $_SESSION['username'];
 
                 </div>
             </div>
-            <div class="join-card-view">
+            <div id="join-card-view" class="swiper-no-swiping">
                 <div class="join-map" id="map"></div>
-                <form method="post" action="" class="recherche_carte">
-                    <input type="search" placeholder="Communauté" id="input_commu"
-                    <input type="search" placeholder="Ville" id="input_ville" onfocus="searchVille()"
-                           onfocusout="zoomVille(this.value)"/>
-                    <button class="btn btn-primary"><i class="mdi mdi-map-marker"></i></button>
-                </form>
+<!--                <form method="post" action="" class="recherche_carte">-->
+<!--                    <input type="search" placeholder="Communauté" id="input_commu"-->
+<!--                    <input type="search" placeholder="Ville" id="input_ville" onfocus="searchVille()"-->
+<!--                           onfocusout="zoomVille(this.value)"/>-->
+<!--                    <button id="btn-go-cardview" class="btn btn-primary"><i class="mdi mdi-map-marker"></i></button>-->
+<!--                </form>-->
 
 
             </div>

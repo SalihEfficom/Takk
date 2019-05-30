@@ -8,7 +8,17 @@ var swiper = new Swiper('.swiper-container', {
         watchState: true,
         replaceState: true,
     },
+    noSwiping: true
 });
+
+document.getElementById("change-view-btn").addEventListener("click", function( event ) {
+    console.log('trrh');
+    document.getElementById("join-list-view").classList.toggle("visible");
+    document.getElementById("join-card-view").classList.toggle("visible");
+    this.classList.toggle("flip");
+    document.querySelector('#change-view-btn i').classList.toggle('mdi-view-sequential');
+}, false);
+
 
 
 // swiper.on('init', function () {

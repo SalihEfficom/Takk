@@ -5,6 +5,7 @@
 
 @import './fonts/MaterialDesignIcon/scss/materialdesignicons.scss';
 @import './fonts/Roboto/roboto/sass/roboto-fontface.scss';
+@import './fonts/takkIcons/style';
 
 a {
   &:focus, &:hover {
@@ -37,7 +38,7 @@ body {
   font-family: bariol;
 }
 
-input[type="text"], input[type="password"] {
+input[type="text"], input[type="password"], input[type="search"] {
   height: 50px;
   background: #{$primary}+14;
   border: none;
@@ -99,7 +100,6 @@ input:focus,textarea:focus {
   height: 3px !important;
   width: 98%;
   border-radius: 135px;
-  box-shadow: 0px 0px 12px 0px #b3b3b3;
 }
 
 
@@ -143,6 +143,8 @@ input:focus,textarea:focus {
   font-family: Bariol;
   font-size: 1.6em;
   color: $myGrey;
+  box-shadow: 0px 0px 12px 0px #b3b3b3;
+
 
   a {
     color: $myGrey ;
@@ -351,3 +353,113 @@ input:focus,textarea:focus {
   width: 100vw;
   z-index: -1;
 }
+
+#join-card-view, #join-list-view {
+  display: none;
+  opacity: 0;
+  transition: all 200ms ease;
+}
+
+.visible {
+  display: block !important;
+  opacity: 1 !important;
+}
+
+
+#input_ville, #input_commu {
+  background: white;
+}
+
+#change-view-btn {
+  position: fixed;
+  top: 85vh;
+  right: 27px;
+  z-index: 200;
+  color: $primary;
+  background-color: #fff;
+  border: none;
+  border-radius: 50%;
+  box-shadow: 0px 0px 8px #00000080;
+  font-size: 1.7em;
+  transition: all 300ms ease;
+  &:active {
+    background: $primary !important;
+    color: white;
+    transform: scale(1.3);
+  }
+}
+
+.flip {
+  transform: translateY(0px) rotateY(180deg);
+}
+
+////////////////  MENU NAV
+
+.menu-nav {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1000;
+  width: 1920px;
+}
+.menu-container {
+  position: fixed;
+  bottom: 0;
+  width: 100vw;
+  height: 60px;
+  //background-image: url("../Content/img/blue-bar.png");
+  //background-position: center;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  .icons-wrapper {
+    width: calc(100vw / 2 - 40px);
+    display: flex;
+    justify-content: space-around;
+
+    .icon {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      color: $primary;
+      i {
+      font-size: 1.7em;
+      }
+      span {
+        position: absolute;
+        bottom: 0;
+        display: none;
+      }
+    }
+  }
+}
+
+.menu-btn {
+  width: 65px;
+  height: 65px;
+  background: $secondary;
+  border-radius: 50%;
+  position: fixed;
+  bottom: 29px;
+  left: 50%;
+  transform: translateX(-50%);
+  box-shadow: 0px 0px 0px 7px #{$secondary}87;
+  display: flex;
+  z-index: 1000;
+  transition: all 200ms ease;
+  &:active{
+    width: 15px;
+    height: 15px;
+    box-shadow: 0px 0px 0px 37px #{$secondary}87;
+    transform: translate(-50%, -24px);
+  }
+  i {
+    margin: auto;
+    font-size: 3em;
+    color: white;
+  }
+}
+
+
