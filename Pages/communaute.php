@@ -33,6 +33,22 @@ print_r($getInfoUser);
     <script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js"></script>
     <script src="../Script/commu_carte.js"></script>
 
+    <script type="text/javascript">
+        function request() {
+            var xhr = getXMLHttpRequest();
+
+            var nom = encodeURIComponent(document.getElementById("nom").value);
+            var description = encodeURIComponent(document.getElementById("description").value);
+            var motcle = encodeURIComponent(document.getElementById("motcle").value);
+            var ville = encodeURIComponent(document.getElementById("ville").value);
+
+            xhr.open("GET", "../php/ajoutCommu.php?nom="+nom+"&description="+description+"&motcle="+motcle+"&ville="+ville, true);
+            xhr.send(null);
+
+        }
+
+    </script>
+
 </head>
 <body>
 <form action="../php/pdo/disconnect.php" method="post">
@@ -92,7 +108,6 @@ print_r($getInfoUser);
                 <div class="join-map" id="map"></div>
                 <form method="post" action="" class="recherche_carte">
                     <input type="search" placeholder="Communauté" id="input_commu"
-                           onfocusout="searchMotCle()"/>
                     <input type="search" placeholder="Ville" id="input_ville" onfocus="searchVille()"
                            onfocusout="zoomVille(this.value)"/>
                     <button class="btn btn-primary"><i class="mdi mdi-map-marker"></i></button>
@@ -245,7 +260,7 @@ print_r($getInfoUser);
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/js/swiper.js"></script>
 <script src="../Script/script.js"></script>
 <script src="../Script/commu.js"></script>
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBkC_q1SmylBqut6V3kcnknv-uj42_gEFQ&callback=initMap&libraries=places" async defer></script>
+<script src="https://maps.googleapis.com/maps/api/js?sensor=false&key=AIzaSyBkC_q1SmylBqut6V3kcnknv-uj42_gEFQ&callback=initMap&libraries=places" async defer></script>
 
 </body>
 </html>

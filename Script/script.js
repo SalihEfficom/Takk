@@ -8,8 +8,8 @@ var swiper = new Swiper('.swiper-container', {
         watchState: true,
         replaceState: true,
     },
-
 });
+
 
 // swiper.on('init', function () {
 //     if(swiper.activeIndex == 0){
