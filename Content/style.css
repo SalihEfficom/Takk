@@ -223,6 +223,7 @@ input{
     height: 100px;
     background: red;
     border: 3px solid none;
+    text-align: center;
 }
 
 .commencez {
@@ -234,11 +235,13 @@ input{
     text-align: center;
     font-size: 28px;
     padding: 20px;
-    width: 245px;
+    width: 345px;
     transition: all 0.5s;
     cursor: pointer;
     margin: 5px;
-    margin-left: 25%;
+    position: relative;
+    margin-top: 40%;
+    margin-left: 34%;
 }
 
 .commencez span {
@@ -261,7 +264,7 @@ input{
     z-index:1;
     width: 100%;
     background-image: url('../Content/img/fond1.png');
-    min-height: 800px;
+    min-height: 1738px;
     background-size: cover;
     background-repeat: no-repeat;
     display: flex;
