@@ -462,4 +462,12 @@ input:focus,textarea:focus {
   }
 }
 
+.pac-container {
+  z-index: 10000 !important;
+}
+
+.hdpi.pac-logo:after {
+  display: none !important;
+}
+
 

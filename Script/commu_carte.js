@@ -52,6 +52,15 @@ function searchVille(){
     var autocomplete = new google.maps.places.Autocomplete(inputVille, options);
 }
 
+function searchVilleCrea(){
+    var inputVille = document.getElementById('ville');
+    var options = {
+        types: ['geocode'],
+        componentRestrictions: {country: 'fr'}
+    };
+    var autocomplete = new google.maps.places.Autocomplete(inputVille, options);
+}
+
 function zoomVille(address) {
     if (geocoder) {
         geocoder.geocode({ 'address': address }, function (results, status) {
@@ -177,5 +186,18 @@ function setMapOnAll(map) {
     for (var i = 0; i < markers.length; i++) {
         markers[i].setMap(map);
     }
+}
+
+function request() {
+    var xhr = getXMLHttpRequest();
+
+    var nom = encodeURIComponent(document.getElementById("nom").value);
+    var description = encodeURIComponent(document.getElementById("description").value);
+    var motcle = encodeURIComponent(document.getElementById("motcle").value);
+    var ville = encodeURIComponent(document.getElementById("ville").value);
+
+    xhr.open("GET", "../php/ajoutCommu.php?nom="+nom+"&description="+description+"&motcle="+motcle+"&ville="+ville, true);
+    xhr.send(null);
+
 }
 

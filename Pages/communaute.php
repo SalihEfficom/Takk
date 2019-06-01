@@ -242,7 +242,7 @@ include '../Components/menu.php';
                 <textarea class="mb-3" name="newCommu-desc" id="description"
                           placeholder="Décrivez votre communauté en quelques mots ! "></textarea>
                 <input class="mb-3 hashtag" type="text" placeholder="#Hashtag" id="motcle">
-                <input class="mb-3" type="text" placeholder="ville" id="ville">
+                <input class="mb-3" type="text" placeholder="ville" id="ville" onfocus="searchVilleCrea(this.value)">
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-outline-secondary" data-dismiss="modal">annuler</button>

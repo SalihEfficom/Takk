@@ -21511,4 +21511,12 @@ input:focus, textarea:focus {
   color: white;
 }
 
+.pac-container {
+  z-index: 10000 !important;
+}
+
+.hdpi.pac-logo:after {
+  display: none !important;
+}
+
 /*# sourceMappingURL=site.css.map */
