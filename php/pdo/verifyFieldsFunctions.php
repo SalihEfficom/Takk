@@ -1,4 +1,5 @@
 <?php
+
 function checkTextInputs($name,$firstname,$city){
     $ok = false;
     if ((isset($name) && !empty($name)) && (isset($firstname) && !empty($firstname)) && (isset($city) && !empty($city))) {
@@ -35,6 +36,30 @@ function checkPassword($password){
     if (isset($password) && !empty($password)) {
         $ok = true;
     }
+    return $ok;
+}
+
+function checkTel($tel){
+    $ok = false;
+    if(preg_match("/^(?:(?:\+|00)33|0)\s*[1-9](?:[\s.-]*\d{2}){4}$/", $tel)) {
+       $ok = true;
+    }
+    return $ok;
+}
+
+function checkDoublons($mail){
+    $conn = connection();
+    $ok = false;
+    $result = $conn->prepare("SELECT * FROM membre where mail= :mail");
+    $result->execute(array(
+        "mail" => $mail
+    ));
+
+    $num_rows = $result->rowCount();
+    if($num_rows < 1){
+        return true;
+    }
+
     return $ok;
 }
 

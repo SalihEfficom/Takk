@@ -1,21 +1,15 @@
 <?php
 include '../php/pdo/getInfoMembre.php';
 include '../php/pdo/dbconfig.php';
-
 session_start();
-
-
 if (!isset($_SESSION['mail']) || !isset($_SESSION['password'])) {
     header("Location: inscription.php");
     exit();
 }
 
-
 $getInfoUser = getInfoMembre($_SESSION['mail'], $_SESSION['password']);
 
-
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -26,29 +20,45 @@ $getInfoUser = getInfoMembre($_SESSION['mail'], $_SESSION['password']);
 </head>
 
 <body>
+    <form action="../php/pdo/disconnect.php" method="post">
+        <input type="submit" value="Se deconnecter">
+    </form>
     <div class="profil">
         <div id="infoProfil">
+            <p>
+                <?php echo $getInfoUser['mail'];?>
+            </p>
+            <p>
+                <?php echo $getInfoUser['prenom'];?>
+            </p>
+            <p>
+                <?php echo $getInfoUser['nom'];?>
+            </p>
+            <p>
+                <?php echo $getInfoUser['dateNaiss'];?>
+            </p>
+            <p>
+                <?php echo $getInfoUser['ville'];?>
+            </p>
+            <p>
+                <?php echo $getInfoUser['pays'];?>
+            </p>
+            <p>
+                <?php echo $getInfoUser['tel'];?>
+            </p>
+            <p>
+                <?php echo $getInfoUser['adresse'];?>
+            </p>
 
-            <p>
-                <?php echo $getInfoUser['mail']; ?>
-            </p>
-            <p>
-                <?php echo $getInfoUser['prenom']; ?>
-            </p>
-            <p>
-                <?php echo $getInfoUser['nom']; ?>
-            </p>
-            <p>
-                <?php echo $getInfoUser['dateNaiss']; ?>
-            </p>
-            <p>
-                <?php echo $getInfoUser['ville']; ?>
-            </p>
         </div>
 
         <div id="editButton">
             <button onclick="myFunction();" class="editButton" id="editButton">editez profil (icone)</button>
         </div>
+        
+    </div>
+    </div class="error">
+
     </div>
 </body>
 <script type="text/javascript">
@@ -62,6 +72,9 @@ $getInfoUser = getInfoMembre($_SESSION['mail'], $_SESSION['password']);
             <input value="<?php echo $getInfoUser['ville']; ?>" class="mb-3" type="text" name="city" id="city" placeholder="Ville">
             <input type="hidden" id="mail" value="<?php echo $_SESSION['mail']; ?>">
             <input type="hidden" id="password" value="<?php echo $_SESSION['password']; ?>">
+            <input class="mb-3" type="text" id="pays" name="pays" placeholder="Pays" required>
+            <input class="mb-3" type="text" id="adresse" name="adresse" placeholder="Adresse" required>
+            <input class="mb-3" type="tel" id="tel" name="tel" required placeholder="Numéro de téléphone">
             <input type="button" value="Editer" onclick="editSubscribing(readData);"> 
 
         </form>

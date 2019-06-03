@@ -5,7 +5,7 @@ function getInfoMembre($mail,$pwd){
 
     $conn = connection();
     $pwdHash = md5($pwd);
-    $sth = $conn->prepare('SELECT mail,nom,prenom,dateNaiss,ville FROM membre WHERE mail = :mail AND pwd = :pwd');
+    $sth = $conn->prepare('SELECT * FROM membre WHERE mail = :mail AND pwd = :pwd');
     $sth->bindValue(':mail',$mail);
     $sth->bindValue(':pwd',$pwdHash);
     $sth->execute();

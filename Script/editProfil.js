@@ -6,6 +6,12 @@ function editSubscribing(callback) {
     var city = encodeURIComponent(document.getElementById("city").value);
     var mail = encodeURIComponent(document.getElementById("mail").value);
     var password = encodeURIComponent(document.getElementById("password").value);
+
+    var pays = encodeURIComponent(document.getElementById("pays").value);
+    var adresse = encodeURIComponent(document.getElementById("adresse").value);
+    var tel = encodeURIComponent(document.getElementById("tel").value);
+
+
     // var password = encodeURIComponent(document.getElementById("pwd").value);
 
 
@@ -21,11 +27,12 @@ function editSubscribing(callback) {
 
     xhr.open("POST", "../php/pdo/editProfil.php", true);
     xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-    xhr.send('name=' + name + '&firstname=' + firstname + '&birthday=' + birthday + '&city=' + city + '&mail=' + mail+ '&password=' + password);
+    xhr.send('name=' + name + '&firstname=' + firstname + '&birthday=' + birthday + '&city=' + city + '&mail=' + mail + '&password=' + password + '&pays=' + pays + '&adresse=' + adresse + '&tel=' + tel)      ;
 
 }
 
 function readData(sData) {
+
 	// On peut maintenant traiter les données sans encombrer l'objet XHR.
 	if (sData == true) {
         // document.getElementById("error").innerHTML = sData;
@@ -35,7 +42,8 @@ function readData(sData) {
 
 	} else {
         // console.log(sData);
-        error = "Erreur : veuillez verifier que les champs ne sont pas vides ou que l'adresse mail a un forma correcte (ex : exemple@exemple.fr)";
+        error = "Erreur : veuillez verdvdfvifier que les champs ne sont pas vides ou que l'adresse mail a un forma correcte (ex : exemple@exemple.fr)";
+        alert(error);
         document.getElementById("error").innerHTML = error;
 	}
 }

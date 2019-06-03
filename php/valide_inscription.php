@@ -7,7 +7,7 @@
  */
 
 
-$mysqli = new mysqli("localhost", "root", "", "testtakk");
+$mysqli = new mysqli("localhost", "root", "", "takk");
 //include '../connexionBdd/bddTakk.php';
 //mysqli_query($con,"SELECT message from poste_message where id_user=1");
 //
