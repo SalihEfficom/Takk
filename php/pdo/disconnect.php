@@ -5,7 +5,7 @@ session_unset();
 
 session_destroy();
 
-header("Location: ../../Pages/inscription.php#slide-connexion");
+header("Location: ../../Pages/accueil_deco.html");
 
 
 ?>

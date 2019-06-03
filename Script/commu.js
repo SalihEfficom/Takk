@@ -17,16 +17,16 @@
 //     });
 // }
 
-window.addEventListener("DOMContentLoaded", (event) => {
-    getCreation();
-});
-
-function getCreation(){
-  var xhr = new XMLHttpRequest();
-  xhr.open("GET", "../php/getCreation.php?", true);
-  xhr.send();
-  xhr.onreadystatechange = function() {
-      let data =xhr.response;
-        alert(data);
-    }
-}
+// window.addEventListener("DOMContentLoaded", (event) => {
+//     getCreation();
+// });
+//
+// function getCreation(){
+//   var xhr = new XMLHttpRequest();
+//   xhr.open("GET", "../php/getCreation.php?", true);
+//   xhr.send();
+//   xhr.onreadystatechange = function() {
+//       let data =xhr.response;
+//         alert(data);
+//     }
+// }

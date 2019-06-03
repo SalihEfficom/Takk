@@ -3,7 +3,7 @@ include '../php/pdo/getInfoMembre.php';
 include '../php/pdo/dbconfig.php';
 session_start();
 if (!isset($_SESSION['mail']) || !isset($_SESSION['password'])) {
-    header("Location: inscription.php");
+    header("Location: accueil_deco.html");
     exit();
 }
 
@@ -72,9 +72,9 @@ $getInfoUser = getInfoMembre($_SESSION['mail'], $_SESSION['password']);
             <input value="<?php echo $getInfoUser['ville']; ?>" class="mb-3" type="text" name="city" id="city" placeholder="Ville">
             <input type="hidden" id="mail" value="<?php echo $_SESSION['mail']; ?>">
             <input type="hidden" id="password" value="<?php echo $_SESSION['password']; ?>">
-            <input class="mb-3" type="text" id="pays" name="pays" placeholder="Pays" required>
-            <input class="mb-3" type="text" id="adresse" name="adresse" placeholder="Adresse" required>
-            <input class="mb-3" type="tel" id="tel" name="tel" required placeholder="Numéro de téléphone">
+            <input value="<?php echo $getInfoUser['pays'];?>" class="mb-3" type="text" id="pays" name="pays" placeholder="Pays" required>
+            <input value="<?php echo $getInfoUser['adresse'];?>" class="mb-3" type="text" id="adresse" name="adresse" placeholder="Adresse" required>
+            <input value="<?php echo $getInfoUser['tel'];?>" class="mb-3" type="tel" id="tel" name="tel" required placeholder="Numéro de téléphone">
             <input type="button" value="Editer" onclick="editSubscribing(readData);"> 
 
         </form>
