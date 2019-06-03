@@ -238,21 +238,29 @@ include '../Components/menu.php';
                 </button>
             </div>
             <div class="modal-body d-flex flex-column">
-                <input class="in mb-3" type="text" placeholder="Nom" id="nom">
+                <input class="in mb-3" type="text" placeholder="Nom" id="nom" onkeyup="verifText()">
                 <textarea class="mb-3" name="newCommu-desc" id="description"
-                          placeholder="Décrivez votre communauté en quelques mots ! "></textarea>
-                <input class="mb-3 hashtag" type="text" placeholder="#Hashtag" id="motcle">
-                <input class="mb-3" type="text" placeholder="ville" id="ville" onfocus="searchVilleCrea(this.value)">
+                          placeholder="Décrivez votre communauté en quelques mots ! " onkeyup="verifText()"></textarea>
+                <input class="mb-3 hashtag" type="text" placeholder="#Hashtag" id="motcle" onkeyup="verifText()">
+                <input class="mb-3" type="text" placeholder="ville" id="ville" onfocus="searchVilleCrea()" onkeyup="verifText(this.value)">
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-outline-secondary" data-dismiss="modal">annuler</button>
-                <button type="button" class="btn btn-primary" onclick="request();">valider</button>
+                <button type="button" class="btn btn-primary" disabled="disabled    " id="buttonvalide"  onclick="request();">valider</button>
             </div>
         </div>
     </div>
 </div>
 
-
+<script>
+    document.getElementById("change-view-btn").addEventListener("click", function( event ) {
+        console.log('trrh');
+        document.getElementById("join-list-view").classList.toggle("visible");
+        document.getElementById("join-card-view").classList.toggle("visible");
+        this.classList.toggle("flip");
+        document.querySelector('#change-view-btn i').classList.toggle('mdi-view-sequential');
+    }, false);
+</script>
 <!---------------------------------------------------------------------------------->
 <!-- Swiper JS -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/js/swiper.js"></script>

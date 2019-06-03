@@ -201,3 +201,66 @@ function request() {
 
 }
 
+function check(){
+    var allFilled = true;
+
+    var inputs = document.getElementsByTagName('input');
+    for(var i=0; i<inputs.length; i++){
+        if(inputs[i].type == "text"  && inputs[i].value == ''){
+            allFilled = false;
+            break;
+        }
+    }
+    console.log("gergeg")
+    document.getElementById("buttonvalide").disabled = !allFilled;
+}
+
+window.onload = function(){
+    var inputs = document.getElementsByTagName('input');
+    for(var i=0; i<inputs.length; i++){
+        if(inputs[i].type == "text"){
+            inputs[i].onkeyup = check;
+            inputs[i].onblur = check;
+        }
+    }
+
+};
+
+// function verifText(value){
+//     if(value.length < 1) {
+//         document.getElementById('buttonvalide').disabled = false;
+//         console.log('ge')
+//     } else {
+//         document.getElementById('buttonvalide').disabled = true;
+//         console.log('aezze')
+//
+//     }
+// }
+
+
+
+function verifText(){
+
+    let vnom = document.getElementById('nom').value;
+    let vville = document.getElementById('ville').value;
+    let vmotcle = document.getElementById('motcle').value;
+    let vdescription = document.getElementById('description').value;
+    if(vnom.length > 0 && vville.length > 0 && vmotcle.length && vdescription.length > 0 ) {
+        document.getElementById('buttonvalide').disabled = false;
+        console.log('ge');
+        console.log(vnom.length);
+        console.log(vville.length);
+        console.log(vmotcle.length);
+        console.log(vdescription.length);
+    } else {
+        document.getElementById('buttonvalide').disabled = true;
+
+        console.log('aezze');
+        console.log(vnom.length);
+        console.log(vville.length);
+        console.log(vmotcle.length);
+        console.log(vdescription.length);
+
+    }
+}
+
