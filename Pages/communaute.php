@@ -32,6 +32,8 @@ print_r($getInfoUser);
     <script type="text/javascript" src="../Script/fonctionxmlhttp.js"></script>
     <script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js"></script>
     <script src="../Script/commu_carte.js"></script>
+    <script src="../Script/commu.js"></script>
+
 
     <script type="text/javascript">
         function request() {

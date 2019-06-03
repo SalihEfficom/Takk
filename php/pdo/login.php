@@ -34,14 +34,14 @@ if ((isset($_POST['mail']) && !empty($_POST['mail'])) && (isset($_POST['pwd']) &
     } else {
        $error = "Le mot de passe ou l'email est incorrecte.";
        $_SESSION["error"] = $error;
-       header("location: ../../Pages/inscription.php");
+       header("location: ../../Pages/inscription.php#slide-connexion");
        exit();
     }
     
 } else {
     $error = "Rien est saisie.";
     $_SESSION["error"] = $error;
-    header("location: ../../Pages/inscription.php");
+    header("location: ../../Pages/inscription.php#slide-connexion");
     exit();
 }
 
