@@ -1,12 +1,12 @@
 <?php
 session_start();
 
-if (!isset($_SESSION['username']))
+if (!isset($_SESSION['user']))
 {
     header("Location: Pages/inscription.php");
     exit();
 }
-echo $_SESSION['username']; 
+echo $_SESSION['user']; 
 ?>
 <!DOCTYPE html>
 <html lang="fr">
