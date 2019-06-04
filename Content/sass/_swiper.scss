@@ -11,9 +11,9 @@
 }
 
 .swiper-container-horizontal > .swiper-scrollbar {
-  position: absolute;
+  position: fixed;
   left: 1%;
-  bottom: 3px;
+  top: 37px;
   z-index: 50;
   height: 5px;
   width: 98%;

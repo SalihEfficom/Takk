@@ -1,12 +1,18 @@
 <?php
+include '../php/pdo/getInfoMembre.php';
+include '../php/pdo/dbconfig.php';
 session_start();
 
-if (!isset($_SESSION['username']))
+if (!isset($_SESSION['mail']) || !isset($_SESSION['password']) )
 {
-    header("Location: inscription.php");
+    header("Location: inscription.php#slide-connexion");
     exit();
 }
-echo $_SESSION['username']; 
+
+$getInfoUser = getInfoMembre($_SESSION['mail'],$_SESSION['password']);
+
+//print_r($getInfoUser);
+
 ?>
 <!doctype html>
 <html lang="fr">
@@ -26,15 +32,36 @@ echo $_SESSION['username'];
     <script type="text/javascript" src="../Script/fonctionxmlhttp.js"></script>
     <script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js"></script>
     <script src="../Script/commu_carte.js"></script>
+    <script src="../Script/commu.js"></script>
+
+
+    <script type="text/javascript">
+        function request() {
+            var xhr = getXMLHttpRequest();
+
+            var nom = encodeURIComponent(document.getElementById("nom").value);
+            var description = encodeURIComponent(document.getElementById("description").value);
+            var motcle = encodeURIComponent(document.getElementById("motcle").value);
+            var ville = encodeURIComponent(document.getElementById("ville").value);
+
+            xhr.open("GET", "../php/ajoutCommu.php?nom="+nom+"&description="+description+"&motcle="+motcle+"&ville="+ville, true);
+            xhr.send(null);
+
+        }
+
+    </script>
 
 </head>
 <body>
-<form action="../php/pdo/disconnect.php" method="post">
-    <input type="submit" value="Se deconnecter">
-</form>
+<!--<form action="../php/pdo/disconnect.php" method="post">-->
+<!--    <input type="submit" value="Se deconnecter">-->
+<!--</form>-->
 <!---------------------------------------------------------------------------------->
 
 <!-- <div data-include="../comp/menu.html"></div> -->
+<?php
+include '../Components/menu.php';
+?>
 
 <!-- Swiper -->
 <div class="tabs-name">
@@ -44,12 +71,14 @@ echo $_SESSION['username'];
 <div class="swiper-container">
     <div class="swiper-wrapper">
         <div class="swiper-slide " data-hash="slide1">
-            <div style="display: none;" class="join-list-view">
-                <div class="search-container">
-                    <input type="text" class="keywords">
-                    <input type="text" class="city">
-                    <button class="btn btn-primary"><i class="mdi mdi-map-marker"></i></button>
-                </div>
+            <form method="post" action="" class="search-container recherche_carte">
+                <input type="search" placeholder="Recherche" id="input_commu" onkeypress="if (event.keyCode==13){searchMotCle();}" />
+                <input type="search" placeholder="Ville" id="input_ville" onfocus="searchVille()"
+                       onfocusout="zoomVille(this.value)" class="city"/>
+            </form>
+            <button class="btn btn-primary" id="change-view-btn"><i class="mdi mdi-map-marker"></i></button>
+
+            <div id="join-list-view" class="visible">
                 <div class="grid-cards-container gtc300 commu-cards-container">
 
                     <div class="card commu-card">
@@ -82,15 +111,14 @@ echo $_SESSION['username'];
 
                 </div>
             </div>
-            <div class="join-card-view">
+            <div id="join-card-view" class="swiper-no-swiping">
                 <div class="join-map" id="map"></div>
-                <form method="post" action="" class="recherche_carte">
-                    <input type="search" placeholder="Communauté" id="input_commu"
-                           onfocusout="searchMotCle()"/>
-                    <input type="search" placeholder="Ville" id="input_ville" onfocus="searchVille()"
-                           onfocusout="zoomVille(this.value)"/>
-                    <button class="btn btn-primary"><i class="mdi mdi-map-marker"></i></button>
-                </form>
+<!--                <form method="post" action="" class="recherche_carte">-->
+<!--                    <input type="search" placeholder="Communauté" id="input_commu"-->
+<!--                    <input type="search" placeholder="Ville" id="input_ville" onfocus="searchVille()"-->
+<!--                           onfocusout="zoomVille(this.value)"/>-->
+<!--                    <button id="btn-go-cardview" class="btn btn-primary"><i class="mdi mdi-map-marker"></i></button>-->
+<!--                </form>-->
 
 
             </div>
@@ -219,27 +247,35 @@ echo $_SESSION['username'];
                 </button>
             </div>
             <div class="modal-body d-flex flex-column">
-                <input class="in mb-3" type="text" placeholder="Nom" id="nom">
+                <input class="in mb-3" type="text" placeholder="Nom" id="nom" onkeyup="verifText()">
                 <textarea class="mb-3" name="newCommu-desc" id="description"
-                          placeholder="Décrivez votre communauté en quelques mots ! "></textarea>
-                <input class="mb-3 hashtag" type="text" placeholder="#Hashtag" id="motcle">
-                <input class="mb-3" type="text" placeholder="ville" id="ville">
+                          placeholder="Décrivez votre communauté en quelques mots ! " onkeyup="verifText()"></textarea>
+                <input class="mb-3 hashtag" type="text" placeholder="#Hashtag" id="motcle" onkeyup="verifText()">
+                <input class="mb-3" type="text" placeholder="ville" id="ville" onfocus="searchVilleCrea()" onkeyup="verifText(this.value)">
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-outline-secondary" data-dismiss="modal">annuler</button>
-                <button type="button" class="btn btn-primary" onclick="request();">valider</button>
+                <button type="button" class="btn btn-primary" disabled="disabled    " id="buttonvalide"  onclick="request();">valider</button>
             </div>
         </div>
     </div>
 </div>
 
-
+<script>
+    document.getElementById("change-view-btn").addEventListener("click", function( event ) {
+        console.log('trrh');
+        document.getElementById("join-list-view").classList.toggle("visible");
+        document.getElementById("join-card-view").classList.toggle("visible");
+        this.classList.toggle("flip");
+        document.querySelector('#change-view-btn i').classList.toggle('mdi-view-sequential');
+    }, false);
+</script>
 <!---------------------------------------------------------------------------------->
 <!-- Swiper JS -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/js/swiper.js"></script>
 <script src="../Script/script.js"></script>
 <script src="../Script/commu.js"></script>
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBkC_q1SmylBqut6V3kcnknv-uj42_gEFQ&callback=initMap&libraries=places" async defer></script>
+<script src="https://maps.googleapis.com/maps/api/js?sensor=false&key=AIzaSyBkC_q1SmylBqut6V3kcnknv-uj42_gEFQ&callback=initMap&libraries=places" async defer></script>
 
 </body>
 </html>
