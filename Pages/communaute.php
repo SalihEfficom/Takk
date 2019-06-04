@@ -11,7 +11,7 @@ if (!isset($_SESSION['mail']) || !isset($_SESSION['password']) )
 
 $getInfoUser = getInfoMembre($_SESSION['mail'],$_SESSION['password']);
 
-//print_r($getInfoUser);
+// print_r($getInfoUser);
 
 ?>
 <!doctype html>
@@ -32,7 +32,8 @@ $getInfoUser = getInfoMembre($_SESSION['mail'],$_SESSION['password']);
     <script type="text/javascript" src="../Script/fonctionxmlhttp.js"></script>
     <script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js"></script>
     <script src="../Script/commu_carte.js"></script>
-    <script src="../Script/commu.js"></script>
+    <script defer src="../Script/commu.js"></script>
+    <script src="../Script/fonctionxmlhttp.js"></script>
 
 
     <script type="text/javascript">
@@ -125,21 +126,21 @@ include '../Components/menu.php';
         </div>
         <div class="swiper-slide" data-hash="slide2">
             <span class="heading">Mes créations</span>
-            <div class="grid-cards-container gtc186 commu-cards-container">
-
+            <div id="inner" class="grid-cards-container gtc186 commu-cards-container">
+<!--
                 <div class="card blur-card">
-                    <div class="card-header">
-                        <div class="blur-img h-100 w-100"
-                             style="background-image: url('../Content/img/mecano.jpg')"></div>
-                        <div class="circle-img" style="background-image: url('../Content/img/mecano.jpg')">
+                        <div class="card-header">
+                            <div class="blur-img h-100 w-100"
+                                style="background-image: url('../Content/img/mecano.jpg')"></div>
+                            <div class="circle-img" style="background-image: url('../Content/img/mecano.jpg')">
+                            </div>
+                            <span class="card-title">
+                                Les mécanos de fives
+                            </span>
                         </div>
-                        <span class="card-title">
-                            Les mécanos de fives
-                        </span>
-                    </div>
-                    <div class="card-content">
-                        <button class="btn btn-link">GÉRER</button>
-                    </div>
+                        <div class="card-content">
+                            <button class="btn btn-link">GÉRER</button>
+                        </div>
                 </div>
                 <div class="card blur-card">
                     <div class="card-header">
@@ -182,11 +183,11 @@ include '../Components/menu.php';
                     <div class="card-content">
                         <button class="btn btn-link">GÉRER</button>
                     </div>
-                </div>
+                </div> -->
             </div>
             <span class="heading">Mes inscriptions</span>
-            <div class="grid-cards-container gtc300 commu-cards-container">
-                <div class="card large-card">
+            <div id="innerInscription" class="grid-cards-container gtc300 commu-cards-container">
+                <!-- <div class="card large-card">
                     <div class="large-card-img"
                          style="background-image: url('http://s1.lprs1.fr/images/2017/10/23/7350837_1854fc40-b819-11e7-ad33-44288a1b6cac-1_1000x625.jpg')"></div>
                     <div class="large-card-content">
@@ -225,7 +226,7 @@ include '../Components/menu.php';
                         <div class="card-title">Lycée Robert Schumann</div>
                         <button type="button" class="btn btn-outline-secondary">quitter</button>
                     </div>
-                </div>
+                </div> -->
             </div>
         </div>
     </div>
@@ -274,7 +275,7 @@ include '../Components/menu.php';
 <!-- Swiper JS -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/js/swiper.js"></script>
 <script src="../Script/script.js"></script>
-<script src="../Script/commu.js"></script>
+<!--<script src="../Script/commu.js"></script>-->
 <script src="https://maps.googleapis.com/maps/api/js?sensor=false&key=AIzaSyBkC_q1SmylBqut6V3kcnknv-uj42_gEFQ&callback=initMap&libraries=places" async defer></script>
 
 </body>
