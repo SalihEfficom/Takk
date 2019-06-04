@@ -21519,4 +21519,123 @@ input:focus, textarea:focus {
   display: none !important;
 }
 
+.circleBase {
+  border-radius: 50%;
+}
+
+.type1 {
+  width: 145px;
+  height: 145px;
+  background: red;
+  text-align: center;
+  margin-top: 8%;
+  margin-left: 7%;
+  font-size: 100px;
+}
+
+.commencez {
+  display: inline-block;
+  border-radius: 4px;
+  background-color: #f4511e;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 28px;
+  padding: 20px;
+  width: 345px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+  position: relative;
+  margin-left: 34%;
+}
+
+.commencez span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.commencez span:after {
+  content: "»";
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.fond {
+  z-index: 1;
+  width: 100%;
+  background-image: url("../Content/img/fond1.png");
+  min-height: 1738px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+}
+
+.cercle {
+  font-size: 100px;
+  color: white;
+}
+
+.footer {
+  background-color: #1d2124;
+  height: 600px;
+}
+
+.chiffre {
+  color: white;
+}
+
+.titre {
+  font-size: 45px;
+  color: white;
+  text-decoration: underline;
+}
+
+#titrestyle {
+  margin-left: 10%;
+  margin-top: 24%;
+  font-weight: bold;
+}
+
+#titrestyle2 {
+  margin-left: 50%;
+  margin-top: 9%;
+  font-weight: bold;
+}
+
+#onglets {
+  color: white;
+  font-size: 41px;
+  margin-left: 5%;
+}
+
+.blocfooter {
+  display: flex;
+  flex-direction: column;
+}
+
+.infofooter {
+  display: flex;
+}
+
+#onglets2 {
+  font-size: 45px;
+  color: white;
+  margin-left: 62%;
+}
+
+#basfooter {
+  font-size: 29px;
+  color: white;
+  margin-left: 20%;
+  margin-top: 14%;
+  display: flex;
+}
+
 /*# sourceMappingURL=site.css.map */

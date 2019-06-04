@@ -11,7 +11,7 @@ if (!isset($_SESSION['mail']) || !isset($_SESSION['password']) )
 
 $getInfoUser = getInfoMembre($_SESSION['mail'],$_SESSION['password']);
 
-print_r($getInfoUser);
+//print_r($getInfoUser);
 
 ?>
 <!doctype html>
