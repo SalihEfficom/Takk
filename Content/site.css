@@ -21425,7 +21425,7 @@ input:focus, textarea:focus {
 
 #change-view-btn {
   position: fixed;
-  top: calc(100vh - 170px);
+  bottom: calc(60px + 30px);
   right: 27px;
   z-index: 200;
   color: #0054AA;
