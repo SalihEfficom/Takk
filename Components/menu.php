@@ -3,8 +3,10 @@
 <div class="menu-container">
     <div class="icons-wrapper">
         <div class="icon">
+            <a href="../Pages/profil.php">
             <i class="tki tki-home"></i>
-            <span>Accueil</span>
+            <span>Profil</span>
+            </a>
         </div>
         <div class="icon">
             <i class="tki tki-commu"></i>
