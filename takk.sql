@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le :  jeu. 09 mai 2019 à 18:04
+-- Généré le :  lun. 01 juil. 2019 à 09:37
 -- Version du serveur :  5.7.24
 -- Version de PHP :  7.2.14
 
@@ -35,6 +35,7 @@ CREATE TABLE IF NOT EXISTS `communaute` (
   `description` text COLLATE utf8_unicode_ci NOT NULL,
   `ville` varchar(250) COLLATE utf8_unicode_ci NOT NULL,
   `motcle` text COLLATE utf8_unicode_ci NOT NULL,
+  `admin` int(11) NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=12 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
@@ -42,18 +43,18 @@ CREATE TABLE IF NOT EXISTS `communaute` (
 -- Déchargement des données de la table `communaute`
 --
 
-INSERT INTO `communaute` (`id`, `nom`, `description`, `ville`, `motcle`) VALUES
-(1, 'zfqdq', 'dqzdqzd', 'qzdqzdq', 'qzdqzdqz'),
-(2, 'qzdzq', 'dqzdqzd', 'qdqzd', 'qzdqz'),
-(3, 'menuisier', 'ddqzdqzdqz', 'Marseille', 'menuiserie'),
-(4, 'plombier du dimanche', 'ddqzdqzdqz', 'Tourcoing', 'plomberie'),
-(5, 'voiturier', 'qzdqzdqzd', 'Tourcoing', 'voiture'),
-(6, 'aeqze', 'zqzqeq', 'Dunkerque', 'tuyaux'),
-(7, 'aaazaz', 'dsd', 'qzdqz', 'dqzd'),
-(8, 'aaazaz', 'dsd', 'qzdqz', 'dqzd'),
-(9, 'ddddede', 'ffrf', 'Lille', 'maison'),
-(10, 'qdesfse', 'sefsefs', 'Lyon', 'fesf efsef efesf'),
-(11, 'qdesxx', 'sefsefsxx', 'Calais', 'dqzd maison dzdqz');
+INSERT INTO `communaute` (`id`, `nom`, `description`, `ville`, `motcle`, `admin`) VALUES
+(1, 'zfqdq', 'dqzdqzd', 'qzdqzdq', 'qzdqzdqz', 0),
+(2, 'qzdzq', 'dqzdqzd', 'qdqzd', 'qzdqz', 0),
+(3, 'menuisier', 'ddqzdqzdqz', 'Marseille', 'menuiserie', 0),
+(4, 'plombier du dimanche', 'ddqzdqzdqz', 'Tourcoing', 'plomberie', 0),
+(5, 'voiturier', 'qzdqzdqzd', 'Tourcoing', 'voiture', 0),
+(6, 'aeqze', 'zqzqeq', 'Dunkerque', 'tuyaux', 0),
+(7, 'aaazaz', 'dsd', 'qzdqz', 'dqzd', 0),
+(8, 'aaazaz', 'dsd', 'qzdqz', 'dqzd', 0),
+(9, 'ddddede', 'ffrf', 'Lille', 'maison', 3),
+(10, 'qdesfse', 'sefsefs', 'Lyon', 'fesf efsef efesf', 3),
+(11, 'qdesxx', 'sefsefsxx', 'Calais', 'dqzd maison dzdqz', 3);
 
 -- --------------------------------------------------------
 
@@ -64,24 +65,50 @@ INSERT INTO `communaute` (`id`, `nom`, `description`, `ville`, `motcle`) VALUES
 DROP TABLE IF EXISTS `membre`;
 CREATE TABLE IF NOT EXISTS `membre` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `nom` varchar(250) COLLATE utf8_unicode_ci NOT NULL,
-  `prenom` varchar(250) COLLATE utf8_unicode_ci NOT NULL,
-  `adresse` varchar(250) COLLATE utf8_unicode_ci NOT NULL,
-  `ville` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
-  `pays` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
-  `mail` varchar(250) COLLATE utf8_unicode_ci NOT NULL,
-  `mdp` text COLLATE utf8_unicode_ci NOT NULL,
-  `tel` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
-  `description` text COLLATE utf8_unicode_ci NOT NULL,
+  `pwd` varchar(250) NOT NULL,
+  `mail` varchar(250) NOT NULL,
+  `nom` varchar(255) DEFAULT 'gungor',
+  `prenom` varchar(255) NOT NULL DEFAULT 'salih',
+  `dateNaiss` date DEFAULT NULL,
+  `ville` varchar(255) NOT NULL DEFAULT 'Tourcoing',
+  `adresse` varchar(255) DEFAULT NULL,
+  `pays` varchar(255) NOT NULL,
+  `tel` varchar(255) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
 
 --
 -- Déchargement des données de la table `membre`
 --
 
-INSERT INTO `membre` (`id`, `nom`, `prenom`, `adresse`, `ville`, `pays`, `mail`, `mdp`, `tel`, `description`) VALUES
-(1, 'testnom', 'testprenom', '81 rue test', 'Lille', 'France', 'test@gmail.com', 'testmdp', '0658475698', 'Bonjour, je suis un etudiant de efficom et je test le site.');
+INSERT INTO `membre` (`id`, `pwd`, `mail`, `nom`, `prenom`, `dateNaiss`, `ville`, `adresse`, `pays`, `tel`) VALUES
+(3, 'ba2274b478832a0c9f22c8d557c3f71c', 'gungor.salih@outlook.fr', 'Gungor', 'Salih', '1997-08-20', 'Tourcoing', 'France', '137 Rue Colbert 59200 Tourcoing', '0610877589');
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `membre_communaute`
+--
+
+DROP TABLE IF EXISTS `membre_communaute`;
+CREATE TABLE IF NOT EXISTS `membre_communaute` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `membre_id` int(7) NOT NULL,
+  `communaute_id` int(7) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=7 DEFAULT CHARSET=latin1;
+
+--
+-- Déchargement des données de la table `membre_communaute`
+--
+
+INSERT INTO `membre_communaute` (`id`, `membre_id`, `communaute_id`) VALUES
+(1, 3, 1),
+(2, 3, 2),
+(3, 3, 3),
+(4, 3, 4),
+(5, 3, 5),
+(6, 3, 6);
 
 -- --------------------------------------------------------
 
