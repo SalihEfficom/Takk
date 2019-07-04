@@ -8,7 +8,8 @@ var swiper = new Swiper('.swiper-container', {
         watchState: true,
         replaceState: true,
     },
-    noSwiping: true
+    noSwiping: true,
+    autoHeight: true
 });
 console.log('ipih');
 
@@ -23,7 +24,7 @@ console.log('ipih');
 //         document.querySelector('.tabs-name a:nth-child(1)').style.color = 'grey';
 //         document.querySelector('.tabs-name a:nth-child(2)').style.color = 'orangered';
 //     }
-// });
+// });!
 
 // swiper.on('slideChange', function () {
 //     console.log(swiper.activeIndex);
