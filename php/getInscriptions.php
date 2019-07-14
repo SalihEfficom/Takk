@@ -16,9 +16,9 @@ echo json_encode($getInscription);
 function getInscriptions($mail,$mdp){
     $data[] = array("success" => false,"data" => '');
     if(isset($mail,$mdp)){
-        $mysqli = new mysqli("localhost", "root", "", "takk");
+        $mysqli = new mysqli("localhost", "root", "", "nvtakk");
         $getInfoUser = getInfoMembre($_SESSION['mail'], $_SESSION['password']);
-if ($result = $mysqli->query("SELECT c.nom,c.admin,mc.membre_id from communaute c inner join membre_communaute mc on c.id= mc.communaute_id inner join membre m on m.id=mc.membre_id where mc.membre_id =".$getInfoUser['id']." and c.admin !=".$getInfoUser['id'])) {
+if ($result = $mysqli->query("SELECT c.name,c.admin,mc.idUser from community c inner join user_community mc on c.id= mc.idCommunity inner join user u on u.id=mc.idUser where mc.idUser =".$getInfoUser['id']." and c.admin !=".$getInfoUser['id'])) {
             $row = $result->fetch_all(PDO::FETCH_LAZY);
             $rowCounts = $result->num_rows;
             if($rowCounts == 0){

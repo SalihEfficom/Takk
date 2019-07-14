@@ -8,8 +8,9 @@ function editSubscribing(callback) {
     var password = encodeURIComponent(document.getElementById("password").value);
 
     var pays = encodeURIComponent(document.getElementById("pays").value);
-    var adresse = encodeURIComponent(document.getElementById("adresse").value);
+    // var adresse = encodeURIComponent(document.getElementById("adresse").value);
     var tel = encodeURIComponent(document.getElementById("tel").value);
+
 
 
     // var password = encodeURIComponent(document.getElementById("pwd").value);
@@ -27,7 +28,7 @@ function editSubscribing(callback) {
 
     xhr.open("POST", "../php/pdo/editProfil.php", true);
     xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-    xhr.send('name=' + name + '&firstname=' + firstname + '&birthday=' + birthday + '&city=' + city + '&mail=' + mail + '&password=' + password + '&pays=' + pays + '&adresse=' + adresse + '&tel=' + tel)      ;
+    xhr.send('name=' + name + '&firstname=' + firstname + '&birthday=' + birthday + '&city=' + city + '&mail=' + mail + '&password=' + password + '&pays=' + pays + '&tel=' + tel)      ;
 
 }
 
@@ -41,9 +42,9 @@ function readData(sData) {
         //ici replace with content before 
 
 	} else {
-        // console.log(sData);
+        console.log(sData);
         error = "Erreur : veuillez verdvdfvifier que les champs ne sont pas vides ou que l'adresse mail a un forma correcte (ex : exemple@exemple.fr)";
         alert(error);
-        document.getElementById("error").innerHTML = error;
+        // document.getElementById("error").innerHTML = error;
 	}
 }

@@ -1,7 +1,7 @@
 <?php
 include 'dbconfig.php';
 
-function insertSubscribe($name,$firstname,$city,$birthday,$mail,$password,$adresse,$pays,$tel){
+function insertSubscribe($name,$firstname,$city,$birthday,$mail,$password,$pays,$tel){
     
         $conn = connection();
         $passwordHash = md5($password);
@@ -9,21 +9,22 @@ function insertSubscribe($name,$firstname,$city,$birthday,$mail,$password,$adres
         $firstname = ucfirst($firstname);
         $city = ucfirst($city);
         $pays = ucfirst($pays);
-        // $uuid = md5(uniqid($mail,true));
+        $uevValue = '0';
 
-        $req = $conn->prepare("INSERT INTO membre (mail, pwd, dateNaiss, ville, nom, prenom, pays, adresse, tel) VALUES (:mail, :pwd, :dateNaiss, :ville, :nom, :prenom, :pays, :adresse, :tel)");
+        $req = $conn->prepare("INSERT INTO user (id, prenom, nom, email, pwd, birth, city, country, phone, created_at, uevValue) VALUES (null,:prenom, :nom, :email, :pwd, :birth, :city, :country, :phone, :created_at, :uevValue)");
 
         // $data = $req->execute();
         if($req->execute(array(
-            "mail" => $mail, 
-            "pwd" => $passwordHash,
-            "dateNaiss" => $birthday,
-            "ville" => $city,
-            "nom" => $name,
             "prenom" => $firstname,
-            "pays" => $pays,
-            "adresse" => $adresse,
-            "tel" => $tel
+            "nom" => $name,
+            "email" => $mail, 
+            "pwd" => $passwordHash,
+            "birth" => $birthday,
+            "city" => $city,
+            "country" => $pays,
+            "phone" => $tel,
+            "created_at" => date("Y-m-d H:i:s"),
+            "uevValue" => $uevValue
             ))){
             return true;
         }else{

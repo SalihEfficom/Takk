@@ -9,7 +9,7 @@ function verifySubsribe(callback) {
 
     var tel = encodeURIComponent(document.getElementById("tel").value);
     var pays = encodeURIComponent(document.getElementById("pays").value);
-    var adresse = encodeURIComponent(document.getElementById("adresse").value);
+    // var adresse = encodeURIComponent(document.getElementById("adresse").value);
 
     var xhr = getXMLHttpRequest();
 
@@ -21,8 +21,8 @@ function verifySubsribe(callback) {
 
     xhr.open("POST", "../php/pdo/checkSubscribe.php", true);
     xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-    xhr.send('name=' + name + '&firstname=' + firstname + '&birthday=' + birthday + '&city=' + city + '&mail=' + mail + '&password=' + password + '&tel=' + tel + '&pays=' + pays + '&adresse=' + adresse);
-
+    xhr.send('name=' + name + '&firstname=' + firstname + '&birthday=' + birthday + '&city=' + city + '&mail=' + mail + '&password=' + password + '&tel=' + tel + '&pays=' + pays);
+    
 }
 
 

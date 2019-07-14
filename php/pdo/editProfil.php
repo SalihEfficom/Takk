@@ -3,7 +3,7 @@ include "verifyFieldsFunctions.php";
 include "updateSubscribe.php";
 header("Content-Type: application/json");
 
-$textInputs = checkTextInputs($_POST['name'],$_POST['firstname'],$_POST['city'],$_POST['pays'],$_POST['adresse']);
+$textInputs = checkTextInputs($_POST['name'],$_POST['firstname'],$_POST['city'],$_POST['pays']);
 
 $birthDayInput = checkBirthDayInputs($_POST['birthday']);
 
@@ -13,7 +13,7 @@ $pwd = md5($_POST['password']);
 
 
 if ($textInputs && $birthDayInput && $telInput) {
-    if(updateSubscribe($_POST['name'],$_POST['firstname'],$_POST['city'],$_POST['birthday'],$_POST['mail'],$pwd,$_POST['adresse'],$_POST['pays'],$_POST['tel'])){
+    if(updateSubscribe($_POST['name'],$_POST['firstname'],$_POST['city'],$_POST['birthday'],$_POST['mail'],$pwd,$_POST['pays'],$_POST['tel'])){
         echo true;
     }else{
         echo false;

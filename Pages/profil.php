@@ -26,7 +26,7 @@ $getInfoUser = getInfoMembre($_SESSION['mail'], $_SESSION['password']);
     <div class="profil">
         <div id="infoProfil">
             <p>
-                <?php echo $getInfoUser['mail'];?>
+                <?php echo $getInfoUser['email'];?>
             </p>
             <p>
                 <?php echo $getInfoUser['prenom'];?>
@@ -35,21 +35,17 @@ $getInfoUser = getInfoMembre($_SESSION['mail'], $_SESSION['password']);
                 <?php echo $getInfoUser['nom'];?>
             </p>
             <p>
-                <?php echo $getInfoUser['dateNaiss'];?>
+                <?php echo $getInfoUser['birth'];?>
             </p>
             <p>
-                <?php echo $getInfoUser['ville'];?>
+                <?php echo $getInfoUser['city'];?>
             </p>
             <p>
-                <?php echo $getInfoUser['pays'];?>
+                <?php echo $getInfoUser['country'];?>
             </p>
             <p>
-                <?php echo $getInfoUser['tel'];?>
+                <?php echo $getInfoUser['phone'];?>
             </p>
-            <p>
-                <?php echo $getInfoUser['adresse'];?>
-            </p>
-
         </div>
 
         <div id="editButton">
@@ -69,18 +65,17 @@ $getInfoUser = getInfoMembre($_SESSION['mail'], $_SESSION['password']);
             <input value="<?php echo $getInfoUser['nom']; ?>" class="in mb-3" type="text" name="name" id="name" placeholder="Nom">
             <input value="<?php echo $getInfoUser['prenom']; ?>" class="mb-3" type="text" name="firstname" id="firstname" placeholder="Prénom">
             <input class="mb-3" type="date" name="date" id="date" placeholder="Date de naissance">
-            <input value="<?php echo $getInfoUser['ville']; ?>" class="mb-3" type="text" name="city" id="city" placeholder="Ville">
+            <input value="<?php echo $getInfoUser['city']; ?>" class="mb-3" type="text" name="city" id="city" placeholder="Ville">
             <input type="hidden" id="mail" value="<?php echo $_SESSION['mail']; ?>">
             <input type="hidden" id="password" value="<?php echo $_SESSION['password']; ?>">
-            <input value="<?php echo $getInfoUser['pays'];?>" class="mb-3" type="text" id="pays" name="pays" placeholder="Pays" required>
-            <input value="<?php echo $getInfoUser['adresse'];?>" class="mb-3" type="text" id="adresse" name="adresse" placeholder="Adresse" required>
-            <input value="<?php echo $getInfoUser['tel'];?>" class="mb-3" type="tel" id="tel" name="tel" required placeholder="Numéro de téléphone">
+            <input value="<?php echo $getInfoUser['country'];?>" class="mb-3" type="text" id="pays" name="pays" placeholder="Pays" required>
+            <input value="<?php echo $getInfoUser['phone'];?>" class="mb-3" type="tel" id="tel" name="tel" required placeholder="Numéro de téléphone">
             <input type="button" value="Editer" onclick="editSubscribing(readData);"> 
 
         </form>
     </div>`);
 
-        document.getElementById("date").value = "<?php echo $getInfoUser['dateNaiss']; ?>";
+        document.getElementById("date").value = "<?php echo $getInfoUser['birth']; ?>";
 
 
     }

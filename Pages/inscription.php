@@ -37,7 +37,7 @@ session_start();
                 <input class="mb-3" placeholder="Mot de passe" type="password" name="pwd" required title="Le champs de mot de passe doit contenir ..." id="pwd" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}">
 
                 <input class="mb-3" type="text" id="pays" name="pays" placeholder="Pays" required>
-                <input class="mb-3" type="text" id="adresse" name="adresse" placeholder="Adresse" required>
+                <!-- <input class="mb-3" type="text" id="adresse" name="adresse" placeholder="Adresse" required> -->
                 <input class="mb-3" type="tel" id="tel" name="tel" pattern="^(?:0|\(?\+33\)?\s?|0033\s?)[1-79](?:[\.\-\s]?\d\d){4}$" required placeholder="Numéro de téléphone">
 
 

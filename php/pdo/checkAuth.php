@@ -4,7 +4,7 @@ function checkAuth($log,$pwd){
     
     $conn = connection();
     $pwdHash = md5($pwd);
-    $sth = $conn->prepare('SELECT * FROM membre WHERE mail = :mail AND pwd = :pwd');
+    $sth = $conn->prepare('SELECT * FROM user WHERE email = :mail AND pwd = :pwd');
     $sth->bindValue(':mail',$log,PDO::PARAM_STR);
     $sth->bindValue(':pwd',$pwdHash,PDO::PARAM_STR);
     $sth->execute();

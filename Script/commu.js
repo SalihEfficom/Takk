@@ -45,7 +45,7 @@ function getCreation(){
                     <div class="circle-img" style="background-image: url('../Content/img/mecano.jpg')">
                     </div>
                     <span class="card-title">
-                        ${element.nom}
+                        ${element.name}
                     </span>
                 </div>
                 <div class="card-content">
@@ -82,7 +82,7 @@ function getInscriptions(){
                                     <div class="large-card-img"
                                         style="background-image: url('http://s1.lprs1.fr/images/2017/10/23/7350837_1854fc40-b819-11e7-ad33-44288a1b6cac-1_1000x625.jpg')"></div>
                                     <div class="large-card-content">
-                                        <div class="card-title">${element.nom}</div>
+                                        <div class="card-title">${element.name}</div>
                                         <button type="button" class="btn btn-outline-secondary">quitter</button>
                                     </div>
                                 </div>`;

@@ -16,9 +16,9 @@ echo json_encode($getCreations);
 function getCreations($mail,$mdp){
     $data[] = array("success" => false,"data" => '');
     if(isset($_SESSION['mail'],$_SESSION['password'])){
-        $mysqli = new mysqli("localhost", "root", "", "takk");
+        $mysqli = new mysqli("localhost", "root", "", "nvtakk");
         $getInfoUser = getInfoMembre($_SESSION['mail'], $_SESSION['password']);
-        if ($result = $mysqli->query("SELECT * from communaute where admin=".$getInfoUser['id'])) {
+        if ($result = $mysqli->query("SELECT * from community where admin=".$getInfoUser['id'])) {
             $row = $result->fetch_all(PDO::FETCH_LAZY);
             $rowCounts = $result->num_rows;
             if($rowCounts == 0){

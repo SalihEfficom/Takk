@@ -1,8 +1,8 @@
 <?php
 
-function checkTextInputs($name,$firstname,$city){
+function checkTextInputs($name,$firstname,$city,$country){
     $ok = false;
-    if ((isset($name) && !empty($name)) && (isset($firstname) && !empty($firstname)) && (isset($city) && !empty($city))) {
+    if ((isset($name) && !empty($name)) && (isset($firstname) && !empty($firstname)) && (isset($city) && !empty($city)) && (isset($country) && !empty($country))) {
         $ok = true;
     }
     
@@ -50,7 +50,7 @@ function checkTel($tel){
 function checkDoublons($mail){
     $conn = connection();
     $ok = false;
-    $result = $conn->prepare("SELECT * FROM membre where mail= :mail");
+    $result = $conn->prepare("SELECT * FROM user where email= :mail");
     $result->execute(array(
         "mail" => $mail
     ));
