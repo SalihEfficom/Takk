@@ -37,17 +37,20 @@ $getInfoUser = getInfoMembre($_SESSION['mail'],$_SESSION['password']);
 
 
     <script type="text/javascript">
+
         function request() {
-            var xhr = getXMLHttpRequest();
+            if(confirm("Voulez-vous valider cette communauté ?")){
+                var xhr = getXMLHttpRequest();
 
-            var nom = encodeURIComponent(document.getElementById("nom").value);
-            var description = encodeURIComponent(document.getElementById("description").value);
-            var motcle = encodeURIComponent(document.getElementById("motcle").value);
-            var ville = encodeURIComponent(document.getElementById("ville").value);
+                var nom = encodeURIComponent(document.getElementById("nom").value);
+                var description = encodeURIComponent(document.getElementById("description").value);
+                var motcle = encodeURIComponent(document.getElementById("motcle").value);
+                var ville = encodeURIComponent(document.getElementById("ville").value);
 
-            xhr.open("GET", "../php/ajoutCommu.php?nom="+nom+"&description="+description+"&motcle="+motcle+"&ville="+ville, true);
-            xhr.send(null);
-
+                xhr.open("GET", "../php/ajoutCommu.php?nom="+nom+"&description="+description+"&motcle="+motcle+"&ville="+ville, true);
+                xhr.send(null);
+                location.reload();
+            }
         }
 
     </script>

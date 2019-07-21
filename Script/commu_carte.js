@@ -11,6 +11,8 @@ var latlng;
 var nom=[];
 var desc=[];
 var mot=[];
+var id=[];
+
 let data;
 var cpt=0;
 var geocoder ;
@@ -26,7 +28,7 @@ function initMap() {
     infowindow = new google.maps.InfoWindow;
     geocoder = new google.maps.Geocoder();
 
-    markerVille(geocoder, function (latlng, geoVille, nom, desc, mot) {
+    markerVille(geocoder, function (latlng, geoVille, nom, desc, mot,id) {
         marker = new google.maps.Marker({
             draggable: false,
             raiseOnDrag: false,
@@ -36,6 +38,7 @@ function initMap() {
             nom: nom,
             desc: desc,
             mot: mot,
+            commuId : id,
             map: map
         });
         google.maps.event.addListener(marker, 'click', onMarkerClick);
@@ -81,10 +84,11 @@ function markerVille(geocoder,myfunc) {
         let data = JSON.parse(xhr.response);
 
         for (let i=0; i<data.length; i++) {
-            nom[i] = data[i].nom;
+            nom[i] = data[i].name;
             desc[i] = data[i].description;
-            mot[i] = data[i].motcle;
-            geocoder.geocode( { 'address': data[i].ville}, function(results, status) {
+            mot[i] = data[i].keyword;
+            id[i] = data[i].id;
+            geocoder.geocode( { 'address': data[i].city}, function(results, status) {
                 if (status == google.maps.GeocoderStatus.OK) {
                     console.log(i);
                     newAddress = results[0].geometry.location;
@@ -92,7 +96,7 @@ function markerVille(geocoder,myfunc) {
                     geoVille = results[0].address_components[0].short_name;
                     console.log(nom[i]);
 
-                    myfunc(latlng, geoVille, nom[i], desc[i], mot[i]);
+                    myfunc(latlng, geoVille, nom[i], desc[i], mot[i],id[i]);
                 }
             });
         }
@@ -100,32 +104,42 @@ function markerVille(geocoder,myfunc) {
 }
 
 function createMarker(latlng,ville,nom,desc,mot) {
-    // console.log(nom);
-    // for (var x=0; x<9; x++) {
-        marker = new google.maps.Marker({
-            draggable: false,
-            raiseOnDrag: false,
-            position: latlng,
-            animation: google.maps.Animation.DROP,
-            ville: ville,
-            nom: nom,
-            desc: desc,
-            mot: mot,
-            map: map
-        });
-
-    // }
+    marker = new google.maps.Marker({
+        draggable: false,
+        raiseOnDrag: false,
+        position: latlng,
+        animation: google.maps.Animation.DROP,
+        ville: ville,
+        nom: nom,
+        desc: desc,
+        mot: mot,
+        map: map
+    });
 }
 
 function onMarkerClick() {
     console.log('test');
     var m = this;
-    console.log(m.nom);
-    infowindow.setContent( m.nom+"<br />"+m.ville+"<br />"+m.desc+"<br />"+m.mot);
+    console.log(m);
+    infowindow.setContent( m.nom+"<br />"+m.ville+"<br />"+m.desc+"<br />"+m.mot+"<br /> <input type=\"button\" name=\"theButton\" value=\"voir commu\" class=\"btn\" data-username=\"{{m.commuId}}\" onclick='changeLocation("+m.commuId+")'/>");
     infowindow.open(map, m);
 }
 
-function createMarkerMotCle(latlng,ville,nom,desc,mot) {
+// jQuery(document).on('click', '.btn', function() {
+//
+//     var idCommu = $(this).data('username');
+//     if (name) {
+//         console.log('test if');
+//         window.location = 'http://localhost/Takk/Pages/fildactu.php?idCommu=' + idCommu;
+//     }
+// });
+
+function changeLocation(id){
+    window.location = 'http://localhost/Takk/Pages/fildactu.php?id=' + id;
+}
+
+//Marqueur créé quand on fait la recherche ! Marqueur JAUNE
+function createMarkerMotCle(latlng,ville,nom,desc,mot,id) {
 
     var pinImage = new google.maps.MarkerImage("http://chart.apis.google.com/chart?chst=d_map_pin_letter&chld=|ffe436");
 
@@ -139,12 +153,13 @@ function createMarkerMotCle(latlng,ville,nom,desc,mot) {
         nom: nom,
         desc: desc,
         mot: mot,
+        commuId:id,
         map: map
     });
 
     markers.push(markerCle);
-
     google.maps.event.addListener(markerCle, 'click', onMarkerClick);
+
 }
 
 function searchMotCle(){
@@ -159,27 +174,24 @@ function searchMotCle(){
         let dataV = JSON.parse(xhr.response);
         var geocoder = new google.maps.Geocoder();
 
-        for (let i=0; i<dataV.length; i++) {
+        console.log(dataV);
 
-            nom[i] = dataV[i].nom;
+        for (let i=0; i<dataV.length; i++) {
+            nom[i] = dataV[i].name;
             desc[i] = dataV[i].description;
-            mot[i] = dataV[i].motcle;
+            mot[i] = dataV[i].keyword;
+            id[i] = dataV[i].id;
             var newAddress;
-            geocoder.geocode( { 'address': dataV[i].ville }, function(results, status) {
+            geocoder.geocode( { 'address': dataV[i].city }, function(results, status) {
                 if (status == google.maps.GeocoderStatus.OK) {
                     newAddress = results[0].geometry.location;
                     var latlng = new google.maps.LatLng(parseFloat(newAddress.lat()),parseFloat(newAddress.lng()));
                     geoVille = results[0].address_components[0].short_name;
-                    createMarkerMotCle(latlng,geoVille,nom[i],desc[i],mot[i]);
+                    createMarkerMotCle(latlng,geoVille,nom[i],desc[i],mot[i],id[i]);
                 }
             });
         }
-        // mc = new MarkerClusterer(map, markers);
     }
-}
-
-function separateMotcle(value){
-        console.log('dqzdz');
 }
 
 function setMapOnAll(map) {
@@ -223,7 +235,6 @@ window.onload = function(){
             inputs[i].onblur = check;
         }
     }
-
 };
 
 // function verifText(value){

@@ -9,12 +9,14 @@
             </a>
         </div>
         <div class="icon">
+<!--            <a href="../Pages/communaute.php">-->
             <i class="tki tki-commu"></i>
             <span>Communauté</span>
         </div>
     </div>
     <div class="icons-wrapper">
         <div class="icon">
+<!--            <a href="../Pages/fil_actu.html">-->
             <i class="tki tki-chat"></i>
             <span>Activité</span>
         </div>

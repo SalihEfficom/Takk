@@ -3,7 +3,7 @@ session_start();
 
 if (!isset($_SESSION['user']))
 {
-    header("Location: Pages/inscription.php");
+    header("Location: Pages/accueil_deco.html");
     exit();
 }
 echo $_SESSION['user']; 
