@@ -1,12 +1,18 @@
 <?php
+include '../php/pdo/getInfoMembre.php';
+include '../php/pdo/dbconfig.php';
 session_start();
 
-if (!isset($_SESSION['username']))
+if (!isset($_SESSION['mail']) || !isset($_SESSION['password']) )
 {
-    header("Location: inscription.php");
+    header("Location: inscription.php#slide-connexion");
     exit();
 }
-//echo $_SESSION['username'];
+
+$getInfoUser = getInfoMembre($_SESSION['mail'],$_SESSION['password']);
+
+// print_r($getInfoUser);
+
 ?>
 <!doctype html>
 <html lang="fr">
@@ -26,19 +32,25 @@ if (!isset($_SESSION['username']))
     <script type="text/javascript" src="../Script/fonctionxmlhttp.js"></script>
     <script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js"></script>
     <script src="../Script/commu_carte.js"></script>
-    
+    <script defer src="../Script/commu.js"></script>
+    <script src="../Script/fonctionxmlhttp.js"></script>
+
+
     <script type="text/javascript">
+
         function request() {
-            var xhr = getXMLHttpRequest();
+            if(confirm("Voulez-vous valider cette communauté ?")){
+                var xhr = getXMLHttpRequest();
 
-            var nom = encodeURIComponent(document.getElementById("nom").value);
-            var description = encodeURIComponent(document.getElementById("description").value);
-            var motcle = encodeURIComponent(document.getElementById("motcle").value);
-            var ville = encodeURIComponent(document.getElementById("ville").value);
+                var nom = encodeURIComponent(document.getElementById("nom").value);
+                var description = encodeURIComponent(document.getElementById("description").value);
+                var motcle = encodeURIComponent(document.getElementById("motcle").value);
+                var ville = encodeURIComponent(document.getElementById("ville").value);
 
-            xhr.open("GET", "../php/ajoutCommu.php?nom="+nom+"&description="+description+"&motcle="+motcle+"&ville="+ville, true);
-            xhr.send(null);
-
+                xhr.open("GET", "../php/ajoutCommu.php?nom="+nom+"&description="+description+"&motcle="+motcle+"&ville="+ville, true);
+                xhr.send(null);
+                location.reload();
+            }
         }
 
     </script>
@@ -51,6 +63,9 @@ if (!isset($_SESSION['username']))
 <!---------------------------------------------------------------------------------->
 
 <!-- <div data-include="../comp/menu.html"></div> -->
+<?php
+include '../Components/menu.php';
+?>
 
 <!-- Swiper -->
 <div class="tabs-name">
@@ -60,12 +75,14 @@ if (!isset($_SESSION['username']))
 <div class="swiper-container">
     <div class="swiper-wrapper">
         <div class="swiper-slide " data-hash="slide1">
-            <div style="display: none;" class="join-list-view">
-                <div class="search-container">
-                    <input type="text" class="keywords">
-                    <input type="text" class="city">
-                    <button class="btn btn-primary"><i class="mdi mdi-map-marker"></i></button>
-                </div>
+            <form method="post" action="" class="search-container recherche_carte">
+                <input type="search" placeholder="Recherche" id="input_commu" onkeypress="if (event.keyCode==13){searchMotCle();}" />
+                <input type="search" placeholder="Ville" id="input_ville" onfocus="searchVille()"
+                       onfocusout="zoomVille(this.value)" class="city"/>
+            </form>
+            <button class="btn btn-primary" id="change-view-btn"><i class="mdi mdi-map-marker"></i></button>
+
+            <div id="join-list-view" class="visible">
                 <div class="grid-cards-container gtc300 commu-cards-container">
 
                     <div class="card commu-card">
@@ -98,36 +115,35 @@ if (!isset($_SESSION['username']))
 
                 </div>
             </div>
-            <div class="join-card-view">
+            <div id="join-card-view" class="swiper-no-swiping">
                 <div class="join-map" id="map"></div>
-                <form method="post" action="" class="recherche_carte">
-                    <input type="search" placeholder="Communauté" id="input_commu"
-                           onfocusout="searchMotCle()"/>
-                    <input type="search" placeholder="Ville" id="input_ville" onfocus="searchVille()"
-                           onfocusout="zoomVille(this.value)"/>
-                    <button class="btn btn-primary"><i class="mdi mdi-map-marker"></i></button>
-                </form>
+<!--                <form method="post" action="" class="recherche_carte">-->
+<!--                    <input type="search" placeholder="Communauté" id="input_commu"-->
+<!--                    <input type="search" placeholder="Ville" id="input_ville" onfocus="searchVille()"-->
+<!--                           onfocusout="zoomVille(this.value)"/>-->
+<!--                    <button id="btn-go-cardview" class="btn btn-primary"><i class="mdi mdi-map-marker"></i></button>-->
+<!--                </form>-->
 
 
             </div>
         </div>
         <div class="swiper-slide" data-hash="slide2">
             <span class="heading">Mes créations</span>
-            <div class="grid-cards-container gtc186 commu-cards-container">
-
+            <div id="inner" class="grid-cards-container gtc186 commu-cards-container">
+<!--
                 <div class="card blur-card">
-                    <div class="card-header">
-                        <div class="blur-img h-100 w-100"
-                             style="background-image: url('../Content/img/mecano.jpg')"></div>
-                        <div class="circle-img" style="background-image: url('../Content/img/mecano.jpg')">
+                        <div class="card-header">
+                            <div class="blur-img h-100 w-100"
+                                style="background-image: url('../Content/img/mecano.jpg')"></div>
+                            <div class="circle-img" style="background-image: url('../Content/img/mecano.jpg')">
+                            </div>
+                            <span class="card-title">
+                                Les mécanos de fives
+                            </span>
                         </div>
-                        <span class="card-title">
-                            Les mécanos de fives
-                        </span>
-                    </div>
-                    <div class="card-content">
-                        <button class="btn btn-link">GÉRER</button>
-                    </div>
+                        <div class="card-content">
+                            <button class="btn btn-link">GÉRER</button>
+                        </div>
                 </div>
                 <div class="card blur-card">
                     <div class="card-header">
@@ -170,11 +186,11 @@ if (!isset($_SESSION['username']))
                     <div class="card-content">
                         <button class="btn btn-link">GÉRER</button>
                     </div>
-                </div>
+                </div> -->
             </div>
             <span class="heading">Mes inscriptions</span>
-            <div class="grid-cards-container gtc300 commu-cards-container">
-                <div class="card large-card">
+            <div id="innerInscription" class="grid-cards-container gtc300 commu-cards-container">
+                <!-- <div class="card large-card">
                     <div class="large-card-img"
                          style="background-image: url('http://s1.lprs1.fr/images/2017/10/23/7350837_1854fc40-b819-11e7-ad33-44288a1b6cac-1_1000x625.jpg')"></div>
                     <div class="large-card-content">
@@ -213,7 +229,7 @@ if (!isset($_SESSION['username']))
                         <div class="card-title">Lycée Robert Schumann</div>
                         <button type="button" class="btn btn-outline-secondary">quitter</button>
                     </div>
-                </div>
+                </div> -->
             </div>
         </div>
     </div>
@@ -235,26 +251,34 @@ if (!isset($_SESSION['username']))
                 </button>
             </div>
             <div class="modal-body d-flex flex-column">
-                <input class="in mb-3" type="text" placeholder="Nom" id="nom">
+                <input class="in mb-3" type="text" placeholder="Nom" id="nom" onkeyup="verifText()">
                 <textarea class="mb-3" name="newCommu-desc" id="description"
-                          placeholder="Décrivez votre communauté en quelques mots ! "></textarea>
-                <input class="mb-3 hashtag" type="text" placeholder="#Hashtag" id="motcle">
-                <input class="mb-3" type="text" placeholder="ville" id="ville">
+                          placeholder="Décrivez votre communauté en quelques mots ! " onkeyup="verifText()"></textarea>
+                <input class="mb-3 hashtag" type="text" placeholder="#Hashtag" id="motcle" onkeyup="verifText()">
+                <input class="mb-3" type="text" placeholder="ville" id="ville" onfocus="searchVilleCrea()" onkeyup="verifText(this.value)">
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-outline-secondary" data-dismiss="modal">annuler</button>
-                <button type="button" class="btn btn-primary" onclick="request();">valider</button>
+                <button type="button" class="btn btn-primary" disabled="disabled    " id="buttonvalide"  onclick="request();">valider</button>
             </div>
         </div>
     </div>
 </div>
 
-
+<script>
+    document.getElementById("change-view-btn").addEventListener("click", function( event ) {
+        console.log('trrh');
+        document.getElementById("join-list-view").classList.toggle("visible");
+        document.getElementById("join-card-view").classList.toggle("visible");
+        this.classList.toggle("flip");
+        document.querySelector('#change-view-btn i').classList.toggle('mdi-view-sequential');
+    }, false);
+</script>
 <!---------------------------------------------------------------------------------->
 <!-- Swiper JS -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/js/swiper.js"></script>
 <script src="../Script/script.js"></script>
-<script src="../Script/commu.js"></script>
+<!--<script src="../Script/commu.js"></script>-->
 <script src="https://maps.googleapis.com/maps/api/js?sensor=false&key=AIzaSyBkC_q1SmylBqut6V3kcnknv-uj42_gEFQ&callback=initMap&libraries=places" async defer></script>
 
 </body>

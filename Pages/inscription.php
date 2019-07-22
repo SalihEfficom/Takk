@@ -29,12 +29,17 @@ session_start();
     <div class="swiper-wrapper">
         <div class="swiper-slide " data-hash="slide-inscription">
             <form id="myForm"  class=" d-flex flex-column mt-5">
-                <input class="in mb-3" type="text" name="name" id="name" placeholder="Nom">
-                <input class="mb-3" type="text" name="firstname" id="firstname" placeholder="Prénom">
-                <input class="mb-3" type="date" name="date" id="date" placeholder="Date de naissance">
-                <input class="mb-3" type="text" name="city" id="city" placeholder="Ville">
-                <input class="mb-3" type="text" name="mail" id="mail" placeholder="Mail">
-                <input class="mb-3" type="password" name="pwd" required title="Le champs de mot de passe doit contenir ..." id="pwd" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}">
+                <input class="in mb-3" type="text" name="name" id="name" placeholder="Nom" required>
+                <input class="mb-3" type="text" name="firstname" id="firstname" placeholder="Prénom" required>
+                <input class="mb-3" type="date" name="date" id="date" placeholder="Date de naissance" required>
+                <input class="mb-3" type="text" name="city" id="city" placeholder="Ville" required>
+                <input class="mb-3" type="text" name="mail" id="mail" placeholder="Mail" required>
+                <input class="mb-3" placeholder="Mot de passe" type="password" name="pwd" required title="Le champs de mot de passe doit contenir ..." id="pwd" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}">
+
+                <input class="mb-3" type="text" id="pays" name="pays" placeholder="Pays" required>
+                <!-- <input class="mb-3" type="text" id="adresse" name="adresse" placeholder="Adresse" required> -->
+                <input class="mb-3" type="tel" id="tel" name="tel" pattern="^(?:0|\(?\+33\)?\s?|0033\s?)[1-79](?:[\.\-\s]?\d\d){4}$" required placeholder="Numéro de téléphone">
+
 
                 <input type="button" value="Se connecter" onclick="verifySubsribe(readData);">
                 <div id="message">
@@ -61,7 +66,10 @@ session_start();
                     echo "<span>$error</span>";
                 }
                 ?>
-            </form>
+            </form>     
+            <div>
+                Vous n'êtes pas encore inscrit ? Vous pouvez vous inscrire en cliquant <a href="inscription.php#slide-inscription">ici</a> !
+            </div>
         </div>
     </div>
     <!-- Add Scrollbar -->

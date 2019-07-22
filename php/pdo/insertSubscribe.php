@@ -1,30 +1,36 @@
 <?php
 include 'dbconfig.php';
 
-function insertSubscribe($name,$firstname,$city,$birthday,$mail,$password){
+function insertSubscribe($name,$firstname,$city,$birthday,$mail,$password,$pays,$tel){
     
         $conn = connection();
         $passwordHash = md5($password);
         $name = ucfirst($name);
         $firstname = ucfirst($firstname);
         $city = ucfirst($city);
-        // $uuid = md5(uniqid($mail,true));
+        $pays = ucfirst($pays);
+        $uevValue = '0';
 
-        $req = $conn->prepare("INSERT INTO membre (mail, pwd, dateNaiss, ville, nom, prenom) VALUES (:mail, :pwd, :dateNaiss, :ville, :nom, :prenom)");
+        $req = $conn->prepare("INSERT INTO user (id, prenom, nom, email, pwd, birth, city, country, phone, created_at, uevValue) VALUES (null,:prenom, :nom, :email, :pwd, :birth, :city, :country, :phone, :created_at, :uevValue)");
 
         // $data = $req->execute();
         if($req->execute(array(
-            "mail" => $mail, 
-            "pwd" => $passwordHash,
-            "dateNaiss" => $birthday,
-            "ville" => $city,
-            "nom" => $name,
             "prenom" => $firstname,
+            "nom" => $name,
+            "email" => $mail, 
+            "pwd" => $passwordHash,
+            "birth" => $birthday,
+            "city" => $city,
+            "country" => $pays,
+            "phone" => $tel,
+            "created_at" => date("Y-m-d H:i:s"),
+            "uevValue" => $uevValue
             ))){
-            // $_SESSION'Auth'] = $data[0];
             return true;
-        }
+        }else{
             return false;
+        }
+            
 
 }
 

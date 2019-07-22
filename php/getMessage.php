@@ -1,16 +1,18 @@
 <?php
-/**
-* Created by PhpStorm.
- * User: rayan
-* Date: 05/03/2019
-* Time: 09:05
-*/
+
 header("Access-Control-Allow-Origin: *");
 
-$mysqli = new mysqli("localhost", "root", "", "takk");
+$mysqli = new mysqli("localhost", "root", "", "nvtakk");
 
-if ($result = $mysqli->query("SELECT message from poste_message where id_user=1")) {
-    $row = $result->fetch_array();
-    echo $row['message'];
+$id = (isset($_GET["id"])) ? $_GET["id"] : NULL;
+
+if ($result = $mysqli->query("SELECT * from statut JOIN community ON community.id=statut.idAsso where idAsso=".$id)) {
+
+    $v = array();
+    while($row = $result->fetch_array()){
+        $v[] = $row;
+    }
+    echo json_encode($v);
+
     $result->close();
 }

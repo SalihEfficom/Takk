@@ -1,0 +1,39 @@
+@charset "UTF-8";
+@font-face {
+  font-family: "takk-icons";
+  src: url("fonts/takkIcons/fonts/takk-icons.eot?l6ztzx");
+  src: url("fonts/takkIcons/fonts/takk-icons.eot?l6ztzx#iefix") format("embedded-opentype"), url("fonts/takkIcons/fonts/takk-icons.ttf?l6ztzx") format("truetype"), url("fonts/takkIcons/fonts/takk-icons.woff?l6ztzx") format("woff"), url("fonts/takkIcons/fonts/takk-icons.svg?l6ztzx#takk-icons") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+.tki {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: "takk-icons" !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.tki-home:before {
+  content: "";
+}
+
+.tki-contract:before {
+  content: "";
+}
+
+.tki-chat:before {
+  content: "";
+}
+
+.tki-commu:before {
+  content: "";
+}
+
+/*# sourceMappingURL=style.css.map */

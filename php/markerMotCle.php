@@ -11,9 +11,9 @@ header("Content-Type: text/plain");
 header("Access-Control-Allow-Origin: *");
 
 $input_motcle = (isset($_GET["motcle"])) ? $_GET["motcle"] : NULL;
-$mysqli = new mysqli("localhost", "root", "", "takk");
+$mysqli = new mysqli("localhost", "root", "", "nvtakk");
 
-$result = $mysqli->query("SELECT ville FROM communaute where motcle like '%".$input_motcle."%'");
+$result = $mysqli->query("SELECT * FROM community where keyword like '%".$input_motcle."%'");
 $v = array();
 while($row=mysqli_fetch_array($result)){
     $v[] = $row;

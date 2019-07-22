@@ -1,11 +1,11 @@
-s<?php
+<?php
 function connection(){
     $servername = "localhost";
     $username = "root";
     $password = "";
 
     try {
-        $conn = new PDO("mysql:host=$servername;dbname=testtakk", $username, $password);
+        $conn = new PDO("mysql:host=$servername;dbname=nvtakk", $username, $password);
         // set the PDO error mode to exception
         $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     }

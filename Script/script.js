@@ -8,7 +8,11 @@ var swiper = new Swiper('.swiper-container', {
         watchState: true,
         replaceState: true,
     },
+    noSwiping: true
 });
+console.log('ipih');
+
+
 
 
 // swiper.on('init', function () {
