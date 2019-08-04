@@ -121,7 +121,7 @@ function onMarkerClick() {
     console.log('test');
     var m = this;
     console.log(m);
-    infowindow.setContent( m.nom+"<br />"+m.ville+"<br />"+m.desc+"<br />"+m.mot+"<br /> <input type=\"button\" name=\"theButton\" value=\"voir commu\" class=\"btn\" data-username=\"{{m.commuId}}\" onclick='changeLocation("+m.commuId+")'/>");
+    infowindow.setContent( "<div class='m-nom'>"+m.nom+"</div> <div class='m-ville'>"+m.ville+"</div> <div class='m-desc'>"+m.desc+"</div> <div class='m-mot'>"+m.mot+"</div> <input type=\"button\" name=\"theButton\" value=\"voir commu\" class=\"btn\" data-username=\"{{m.commuId}}\" onclick='changeLocation("+m.commuId+")'/>");
     infowindow.open(map, m);
 }
 

@@ -49,8 +49,8 @@ window.addEventListener("DOMContentLoaded", (event) => {
                     "                        </div>\n" +
                     "                        <div class=\"commu-keywords\">" +
                     "                            #"+d[i].keyword+
-                    "                            <div id='statutActions"+d[i][0]+"' ><button onclick='doContract("+d[i][0]+")' id='"+d[i][0]+"'>Contrat</button>" +
-                    "                            <button>Repondre</button></div>" +
+                    "                            <div style='display: flex;' id='statutActions"+d[i][0]+"' ><button style='margin-left: auto;margin-right: 10px;' class='btn' onclick='doContract("+d[i][0]+")' id='"+d[i][0]+"'> <i class='mdi mdi-file-document-box-outline'></i> Contrat</button>" +
+                    "                            <button class='btn-secondary btn'><i class='mdi mdi-message-reply-text'></i></button></div>" +
                     "                        </div>" +
                     "                    </div>" +
                     "                </div>" +
@@ -139,7 +139,7 @@ function doContract(idStatut){
             async:false,
             crossDomain:true,
             success:function(data){
-                document.getElementById("statutActions"+idStatut).innerHTML="<button>Repondre</button>";
+                document.getElementById("statutActions"+idStatut).innerHTML="<button style='margin-left: auto;' class='btn btn-secondary'><i class='mdi mdi-message-reply-text'></i></button>";
                 // location.reload();
             },
             error:function(data){

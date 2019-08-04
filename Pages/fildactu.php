@@ -25,20 +25,30 @@
 
 <!---------------------------------------------------------------------------------->
 <div data-include="./comp/menu.html"></div>
-<div id="blocheader">
-    <img src="../Content/img/mecano.jpg" class="img_commu" style="width: 100%;height: 130px;" alt="">
+<div id="blocheader" style="margin: 5px;
+    border-radius: 5px;
+    height: 100px;
+    background: rgba(0,0,0,0.5);
+    background-image: url(../Content/img/mecano.jpg);
+    position: sticky;
+    top: 5px;
+    background-size: cover;
+    z-index: 5;
+    background-blend-mode: color;
+    background-position: center;">
+<!--    <img src="../Content/img/mecano.jpg" class="img_commu" style="width: 100%;height: 130px;" alt="">-->
     <span id="titre_commu">Les mécanos de Five</span>
     <div id="blocButton"></div>
 </div>
 
 <!-- Swiper -->
-<div class="tabs-name">
+<div class="tabs-name" style="background: #eeeeee; position: sticky; top: 110px;">
     <a href="#slide1">Fil d'actu</a>
     <a href="#slide2">Membres</a>
 </div>
 <div class="swiper-container">
     <div class="swiper-wrapper">
-        <div id="bloc1" class="swiper-slide " data-hash="slide1">
+        <div id="bloc1" class="swiper-slide " data-hash="slide1" style="padding-top: 40px;">
 
         </div>
         <div id="bloc2" class="swiper-slide" data-hash="slide2">
@@ -46,7 +56,7 @@
         </div>
     </div>
     <!-- Add Scrollbar -->
-    <div class="swiper-scrollbar"></div>
+    <div class="swiper-scrollbar" style="    top: 151px;"></div>
 </div>
 <?php
 $mess = true;

@@ -8262,7 +8262,7 @@ h3 {
   font-size: 0.875rem !important;
 }
 
-.text-l, .heading, .commu-card .card-header .card-title, input[type=text], input[type=password], input[type=search] {
+.text-l, .heading, .commu-card .card-header .card-title, input[type=text], input[type=password], input[type=search], input[type=tel], input[type=date] {
   font-size: 1rem !important;
 }
 
@@ -8381,7 +8381,7 @@ h3 {
   font-size: 0.875rem !important;
 }
 
-.text-l, .heading, .commu-card .card-header .card-title, input[type=text], input[type=password], input[type=search] {
+.text-l, .heading, .commu-card .card-header .card-title, input[type=text], input[type=password], input[type=search], input[type=tel], input[type=date] {
   font-size: 1rem !important;
 }
 
@@ -21124,7 +21124,7 @@ body {
   font-family: bariol;
 }
 
-input[type=text], input[type=password], input[type=search] {
+input[type=text], input[type=password], input[type=search], input[type=tel], input[type=date] {
   height: 50px;
   background: #0054AA14;
   border: none;
@@ -21260,16 +21260,17 @@ input:focus, textarea:focus {
 .commu-card .card-header .card-title {
   color: white;
 }
-.commu-card .card-content {
+
+.card-content {
   padding: 20px;
 }
-.commu-card .card-content .commu-infos {
+.card-content .commu-infos {
   color: #0054AA;
 }
-.commu-card .card-content .commu-desc {
+.card-content .commu-desc {
   color: #464646;
 }
-.commu-card .card-content .commu-keywords {
+.card-content .commu-keywords {
   color: #FF5722;
 }
 
@@ -21636,6 +21637,14 @@ input:focus, textarea:focus {
   margin-left: 20%;
   margin-top: 14%;
   display: flex;
+}
+
+.commu-cards-container {
+  margin-bottom: 30px;
+}
+
+.m-nom {
+  font-size: 2.7em;
 }
 
 /*# sourceMappingURL=site.css.map */

@@ -38,7 +38,7 @@ body {
   font-family: bariol;
 }
 
-input[type="text"], input[type="password"], input[type="search"] {
+input[type="text"], input[type="password"], input[type="search"], input[type="tel"], input[type="date"] {
   height: 50px;
   background: #{$primary}+14;
   border: none;
@@ -185,22 +185,22 @@ input:focus,textarea:focus {
     }
   }
 
-  .card-content {
-    padding: 20px;
-
-    .commu-infos {
-      color: $primary;
-    }
-    .commu-desc {
-      color: $textPrimary;
-    }
-
-    .commu-keywords {
-      color: $secondary;
-    }
-  }
 }
 
+.card-content {
+  padding: 20px;
+
+  .commu-infos {
+    color: $primary;
+  }
+  .commu-desc {
+    color: $textPrimary;
+  }
+
+  .commu-keywords {
+    color: $secondary;
+  }
+}
 .btn {
   text-transform: uppercase;
 }
@@ -595,4 +595,10 @@ input:focus,textarea:focus {
   display: flex;
 }
 
+.commu-cards-container {
+  margin-bottom: 30px;
+}
 
+.m-nom {
+  font-size: 2.7em;
+}

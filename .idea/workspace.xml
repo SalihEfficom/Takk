@@ -1,29 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3441433d-81a6-4ddb-87e0-edc045aa1d16" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Pages/fildactu.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Script/contrats.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Script/filactu.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/php/checkCommu.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/php/doContract.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/php/getContrat.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/php/getMembres.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/php/insertComm.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/php/joinCommu.php" afterDir="false" />
+    <list default="true" id="5b83d298-34e9-446b-8dae-7ee783be2bc7" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Components/menu.php" beforeDir="false" afterPath="$PROJECT_DIR$/Components/menu.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pages/accueil_deco.html" beforeDir="false" afterPath="$PROJECT_DIR$/Pages/accueil_deco.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pages/communaute.php" beforeDir="false" afterPath="$PROJECT_DIR$/Pages/communaute.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pages/contrat.html" beforeDir="false" afterPath="$PROJECT_DIR$/Pages/contrat.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pages/fil_actu.html" beforeDir="false" afterPath="$PROJECT_DIR$/Pages/fil_actu.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Script/commu.js" beforeDir="false" afterPath="$PROJECT_DIR$/Script/commu.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/site.css" beforeDir="false" afterPath="$PROJECT_DIR$/Content/site.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/site.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/Content/site.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/site.scss" beforeDir="false" afterPath="$PROJECT_DIR$/Content/site.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/Content/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pages/comp/head.html" beforeDir="false" afterPath="$PROJECT_DIR$/Pages/comp/head.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pages/fildactu.php" beforeDir="false" afterPath="$PROJECT_DIR$/Pages/fildactu.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pages/profil.php" beforeDir="false" afterPath="$PROJECT_DIR$/Pages/profil.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Script/commu_carte.js" beforeDir="false" afterPath="$PROJECT_DIR$/Script/commu_carte.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/php/ajoutCommu.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/ajoutCommu.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/php/createMarker.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/createMarker.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/php/getMessage.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/getMessage.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/php/markerMotCle.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/markerMotCle.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Script/filactu.js" beforeDir="false" afterPath="$PROJECT_DIR$/Script/filactu.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -31,49 +19,31 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ComposerSettings">
-    <execution>
-      <executable />
-    </execution>
-  </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Script/filactu.js">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Content/site.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="322">
-              <caret line="126" column="30" selection-start-line="126" selection-start-column="30" selection-end-line="126" selection-end-column="30" />
-              <folding>
-                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#span#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-              </folding>
+            <state relative-caret-position="-1186">
+              <caret line="45" column="18" lean-forward="true" selection-start-line="45" selection-start-column="18" selection-end-line="45" selection-end-column="18" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/php/joinCommu.php">
+        <entry file="file://$PROJECT_DIR$/Pages/communaute.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="14" column="46" selection-start-line="14" selection-start-column="46" selection-end-line="14" selection-end-column="46" />
+            <state relative-caret-position="276">
+              <caret line="24" column="5" selection-start-line="24" selection-start-column="5" selection-end-line="36" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Script/contrats.js">
+        <entry file="file://$PROJECT_DIR$/Pages/fil_actu.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="19" column="24" selection-start-line="19" selection-start-column="24" selection-end-line="19" selection-end-column="24" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/php/getContrat.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="22" column="2" lean-forward="true" selection-start-line="22" selection-start-column="2" selection-end-line="22" selection-end-column="2" />
+            <state relative-caret-position="275">
+              <caret line="53" column="32" selection-start-line="53" selection-start-column="32" selection-end-line="53" selection-end-column="32" />
             </state>
           </provider>
         </entry>
@@ -81,106 +51,128 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Pages/fildactu.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="234">
-              <caret line="69" column="84" selection-start-line="69" selection-start-column="82" selection-end-line="69" selection-end-column="84" />
+            <state relative-caret-position="436">
+              <caret line="50" column="90" selection-start-line="50" selection-start-column="90" selection-end-line="50" selection-end-column="90" />
+              <folding>
+                <element signature="n#style#0;n#div#0;n#div#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Script/filactu.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="522">
+              <caret line="141" column="174" selection-start-line="141" selection-start-column="174" selection-end-line="141" selection-end-column="174" />
+              <folding>
+                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#2;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#button#0;n#div#0;n#div#2;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#button#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Pages/profil.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="413">
+              <caret line="146" column="64" selection-start-line="146" selection-start-column="64" selection-end-line="146" selection-end-column="64" />
+              <folding>
+                <element signature="n#style#0;n#form#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Content/Bootstrap/_variables.scss">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="293">
+              <caret line="75" column="16" selection-start-line="75" selection-start-column="16" selection-end-line="75" selection-end-column="16" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Content/sass/_myVariables.scss">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="23">
+              <caret line="1" column="20" selection-start-line="1" selection-start-column="14" selection-end-line="1" selection-end-column="20" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/index.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="115">
+              <caret line="5" column="31" lean-forward="true" selection-start-line="5" selection-start-column="31" selection-end-line="5" selection-end-column="31" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Pages/comp/head.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="253">
+              <caret line="11" column="82" selection-start-line="11" selection-start-column="82" selection-end-line="11" selection-end-column="82" />
             </state>
           </provider>
         </entry>
       </file>
     </leaf>
   </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="JavaScript File" />
-      </list>
-    </option>
-  </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>se dec</find>
-      <find>²²</find>
-      <find>tabs</find>
-      <find>mdi</find>
-      <find>marker</find>
-      <find>communauté</find>
-      <find>cardview</find>
-      <find>list-v</find>
-      <find>join-map</find>
-      <find>change</find>
-      <find>slide1</find>
-      <find>launc</find>
-      <find>takk</find>
-      <find>id=&quot;ville</find>
-      <find>search</find>
-      <find>onkeyup=&quot;verifText(this.value)</find>
-      <find>modal</find>
-      <find>mdi-plus</find>
-      <find>buttonvalide</find>
-      <find>adresse</find>
-      <find>pays</find>
-      <find>valider</find>
-      <find>markermo</find>
-      <find>menu</find>
-      <find>request</find>
-      <find>createMarkerMotCle</find>
-      <find>onMarkerClick</find>
-      <find>contrat</find>
-      <find>re</find>
-      <find>rejoindre</find>
+      <find>nvtakk</find>
+      <find>#titre</find>
+      <find>375px</find>
+      <find>photo_profil_</find>
+      <find>swiper-sli</find>
+      <find>carte</find>
+      <find>ville</find>
+      <find>br</find>
+      <find>StatutAc</find>
+      <find>swiper</find>
+      <find>&lt;link</find>
+      <find>repondre</find>
+      <find>swiper-slide</find>
+      <find>&amp;</find>
+      <find>$primary</find>
+      <find>form</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="saadinte" />
+        <entry key="$PROJECT_DIR$" value="saadantlaya" />
       </map>
     </option>
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/php/pdo/dbconfig.php" />
-        <option value="$PROJECT_DIR$/index.php" />
-        <option value="$PROJECT_DIR$/Content/sass/_swiper.scss" />
-        <option value="$PROJECT_DIR$/Content/site.css" />
-        <option value="$PROJECT_DIR$/Pages/inscription.php" />
-        <option value="$PROJECT_DIR$/Content/fonts/takkIcons/style.scss" />
-        <option value="$PROJECT_DIR$/Content/fonts/takkIcons/variables.scss" />
-        <option value="$PROJECT_DIR$/Content/site.scss" />
-        <option value="$PROJECT_DIR$/Pages/comp/head.html" />
-        <option value="$PROJECT_DIR$/Pages/accueil_co.html" />
-        <option value="$PROJECT_DIR$/Pages/comp/head_end.html" />
-        <option value="$PROJECT_DIR$/Script/script.js" />
-        <option value="$PROJECT_DIR$/Pages/accueil_co.php" />
-        <option value="$PROJECT_DIR$/php/createMarker.php" />
-        <option value="$PROJECT_DIR$/php/markerMotCle.php" />
-        <option value="$PROJECT_DIR$/Pages/fil_actu.html" />
-        <option value="$PROJECT_DIR$/Script/commu.js" />
-        <option value="$PROJECT_DIR$/php/getMessage.php" />
-        <option value="$PROJECT_DIR$/php/getMembres.php" />
-        <option value="$PROJECT_DIR$/php/checkCommu.php" />
-        <option value="$PROJECT_DIR$/Pages/fildactu.php" />
-        <option value="$PROJECT_DIR$/Components/menu.php" />
-        <option value="$PROJECT_DIR$/Pages/communaute.php" />
+        <option value="$PROJECT_DIR$/Content/style.css" />
         <option value="$PROJECT_DIR$/Script/commu_carte.js" />
-        <option value="$PROJECT_DIR$/php/ajoutCommu.php" />
-        <option value="$PROJECT_DIR$/php/insertComm.php" />
-        <option value="$PROJECT_DIR$/php/doContract.php" />
-        <option value="$PROJECT_DIR$/Pages/contrat.html" />
-        <option value="$PROJECT_DIR$/Script/contrats.js" />
-        <option value="$PROJECT_DIR$/php/getContrat.php" />
-        <option value="$PROJECT_DIR$/Pages/accueil_deco.html" />
-        <option value="$PROJECT_DIR$/php/joinCommu.php" />
+        <option value="$PROJECT_DIR$/Pages/fil_actu.html" />
+        <option value="$PROJECT_DIR$/Pages/fildactu.php" />
+        <option value="$PROJECT_DIR$/Pages/comp/head.html" />
         <option value="$PROJECT_DIR$/Script/filactu.js" />
+        <option value="$PROJECT_DIR$/Content/site.scss" />
+        <option value="$PROJECT_DIR$/Pages/profil.php" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-8" />
+    <option name="y" value="-8" />
     <option name="width" value="1936" />
-    <option name="height" value="1047" />
+    <option name="height" value="1056" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -188,27 +180,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope">
-        <subPane subId="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope">
-          <expand>
-            <path>
-              <item name="Takk" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
-            </path>
-            <path>
-              <item name="Takk" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
-              <item name="Pages" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="Takk" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
-              <item name="Script" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -231,15 +202,26 @@
               <item name="Takk" type="462c0819:PsiDirectoryNode" />
               <item name="Pages" type="462c0819:PsiDirectoryNode" />
             </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope">
+        <subPane subId="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope">
+          <expand>
             <path>
-              <item name="Takk" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Takk" type="462c0819:PsiDirectoryNode" />
-              <item name="php" type="462c0819:PsiDirectoryNode" />
+              <item name="Takk" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
             </path>
             <path>
-              <item name="Takk" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Takk" type="462c0819:PsiDirectoryNode" />
-              <item name="Script" type="462c0819:PsiDirectoryNode" />
+              <item name="Takk" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name="Pages" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="Takk" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name="Script" type="9f88c78c:ScopeViewTreeModel$FileNode" />
             </path>
           </expand>
           <select />
@@ -248,11 +230,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
-    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="settings.editor.selected.configurable" value="vcs.Git" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -271,7 +249,7 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="3441433d-81a6-4ddb-87e0-edc045aa1d16" name="Default Changelist" comment="" />
+      <changelist id="5b83d298-34e9-446b-8dae-7ee783be2bc7" name="Default Changelist" comment="" />
       <created>1557666692038</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
@@ -293,11 +271,14 @@
       <workItem from="1559482387858" duration="6078000" />
       <workItem from="1559551244260" duration="617000" />
       <workItem from="1559573094346" duration="1799000" />
-      <workItem from="1563265695430" duration="9706000" />
-      <workItem from="1563358235584" duration="9517000" />
-      <workItem from="1563448179924" duration="7700000" />
-      <workItem from="1563519947131" duration="2418000" />
-      <workItem from="1563624830819" duration="3059000" />
+      <workItem from="1561059246081" duration="1509000" />
+      <workItem from="1561970912070" duration="599000" />
+      <workItem from="1563811692311" duration="140000" />
+      <workItem from="1563811870203" duration="1874000" />
+      <workItem from="1564529287052" duration="181000" />
+      <workItem from="1564691574958" duration="2964000" />
+      <workItem from="1564783256324" duration="1517000" />
+      <workItem from="1564786342692" duration="4696000" />
     </task>
     <task id="LOCAL-00001" summary="fix scrollbar">
       <created>1559067074543</created>
@@ -327,26 +308,23 @@
       <option name="project" value="LOCAL" />
       <updated>1559640017097</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="fix position change view">
+      <created>1559652148972</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1559652148972</updated>
+    </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="90347000" />
-  </component>
-  <component name="TodoView">
-    <todo-panel id="selected-file">
-      <is-autoscroll-to-source value="true" />
-    </todo-panel>
-    <todo-panel id="all">
-      <are-packages-shown value="true" />
-      <is-autoscroll-to-source value="true" />
-    </todo-panel>
+    <option name="totallyTimeSpent" value="67380000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="0" width="1936" height="1047" extended-state="0" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.12633263" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.10625" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -358,25 +336,17 @@
       <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.49947917" weight="0.3297062" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" />
-      <window_info anchor="bottom" id="Version Control" order="9" sideWeight="0.4989339" weight="0.32998884" />
-      <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.5010661" side_tool="true" visible="true" weight="0.24617068" />
-      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.5005208" side_tool="true" weight="0.03264418" />
+      <window_info anchor="bottom" id="Version Control" order="9" sideWeight="0.4984375" weight="0.070729055" />
+      <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.5010661" side_tool="true" weight="0.96735585" />
+      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.5015625" side_tool="true" weight="0.37758434" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.124200426" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Database" order="3" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
-  </component>
-  <component name="VcsManagerConfiguration">
-    <MESSAGE value="fix scrollbar" />
-    <MESSAGE value="jusqu'a icones du menu placée" />
-    <MESSAGE value="site css" />
-    <MESSAGE value="fonticon" />
-    <MESSAGE value="jour avant arsté" />
-    <option name="LAST_COMMIT_MESSAGE" value="jour avant arsté" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/Pages/gestion_communaute.html">
@@ -401,12 +371,15 @@
     <entry file="file://$PROJECT_DIR$/php/pdo/disconnect.php">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.php">
+    <entry file="file://$PROJECT_DIR$/php/pdo/dbconfig.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="276">
-          <caret line="12" column="6" selection-start-line="12" selection-start-column="6" selection-end-line="12" selection-end-column="6" />
+        <state>
+          <caret column="1" selection-start-column="1" selection-end-column="1" />
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/php/createMarker.php">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/Content/fonts/style.scss" />
     <entry file="file://$PROJECT_DIR$/Content/fonts/variables.scss" />
@@ -418,10 +391,10 @@
     <entry file="file://$PROJECT_DIR$/Content/fonts/takkIcons/fonts/takk-icons.svg" />
     <entry file="file://$PROJECT_DIR$/Content/fonts/takkIcons/demo.html" />
     <entry file="file://$PROJECT_DIR$/Content/fonts/takkIcons/style.scss" />
-    <entry file="file://$PROJECT_DIR$/Content/site.scss">
+    <entry file="file://$PROJECT_DIR$/php/ajoutCommu.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="731">
-          <caret line="469" column="26" selection-start-line="469" selection-start-column="26" selection-end-line="469" selection-end-column="26" />
+        <state relative-caret-position="460">
+          <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
         </state>
       </provider>
     </entry>
@@ -439,24 +412,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Pages/accueil_deco.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/Pages/comp/head_end.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="69">
           <caret line="7" selection-start-line="7" selection-end-line="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Pages/comp/head.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="414">
-          <caret line="18" column="7" selection-start-line="18" selection-start-column="7" selection-end-line="18" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Script/script.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="253">
-          <caret line="15" selection-start-line="15" selection-end-line="15" />
         </state>
       </provider>
     </entry>
@@ -475,177 +437,121 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Pages/profil.php">
+    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="322">
-          <caret line="44" column="16" lean-forward="true" selection-start-line="44" selection-start-column="16" selection-end-line="44" selection-end-column="16" />
+        <state relative-caret-position="92">
+          <caret line="4" column="64" selection-start-line="4" selection-start-column="64" selection-end-line="4" selection-end-column="64" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/php/pdo/dbconfig.php">
+    <entry file="file://$PROJECT_DIR$/Components/menu.php" />
+    <entry file="file://$PROJECT_DIR$/Script/script.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="1" selection-start-column="1" selection-end-column="1" />
+        <state relative-caret-position="360">
+          <caret line="17" selection-start-line="17" selection-end-line="17" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/php/valide_inscription.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Pages/fil_actu.html">
+    <entry file="file://$PROJECT_DIR$/Content/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="559">
-          <caret line="137" selection-start-line="137" selection-end-line="137" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/php/getCreation.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" selection-start-line="1" selection-end-line="1" selection-end-column="16" />
+        <state relative-caret-position="230">
+          <caret line="10" column="15" selection-start-line="10" selection-start-column="15" selection-end-line="10" selection-end-column="15" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Script/commu.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="12" lean-forward="true" selection-start-line="15" selection-start-column="12" selection-end-line="15" selection-end-column="12" />
+        <state relative-caret-position="1886">
+          <caret line="82" column="176" selection-start-line="82" selection-start-column="176" selection-end-line="82" selection-end-column="176" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Script/commu_carte.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2635">
-          <caret line="155" column="15" selection-start-line="155" selection-start-column="15" selection-end-line="155" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/php/createMarker.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="6" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Components/menu.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="41" selection-start-line="12" selection-start-column="41" selection-end-line="12" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/php/markerMotCle.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="22" column="2" lean-forward="true" selection-start-line="22" selection-start-column="2" selection-end-line="22" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/php/getInscriptions.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="20" column="205" selection-start-line="20" selection-start-column="187" selection-end-line="20" selection-end-column="205" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/php/ajoutCommu.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="25" column="116" selection-start-line="25" selection-start-column="116" selection-end-line="25" selection-end-column="116" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/php/insertComm.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="22" selection-start-line="22" selection-end-line="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/php/getMessage.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Pages/communaute.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="112">
-          <caret line="20" column="25" lean-forward="true" selection-start-line="20" selection-start-column="25" selection-end-line="20" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/php/getMembres.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Pages/contrat.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="22" column="27" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Script/contrats.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="19" column="24" selection-start-line="19" selection-start-column="24" selection-end-line="19" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/php/doContract.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" column="176" selection-start-line="18" selection-start-column="158" selection-end-line="18" selection-end-column="176" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/php/checkCommu.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="116" selection-start-line="12" selection-start-column="98" selection-end-line="12" selection-end-column="116" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Pages/accueil_deco.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="182">
-          <caret line="25" column="18" selection-start-line="25" selection-start-column="18" selection-end-line="25" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/php/getContrat.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="22" column="2" lean-forward="true" selection-start-line="22" selection-start-column="2" selection-end-line="22" selection-end-column="2" />
+        <state relative-caret-position="2852">
+          <caret line="124" column="28" lean-forward="true" selection-start-line="124" selection-start-column="28" selection-end-line="124" selection-end-column="28" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Pages/fildactu.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="69" column="84" selection-start-line="69" selection-start-column="82" selection-end-line="69" selection-end-column="84" />
+        <state relative-caret-position="436">
+          <caret line="50" column="90" selection-start-line="50" selection-start-column="90" selection-end-line="50" selection-end-column="90" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/php/joinCommu.php">
+    <entry file="file://$PROJECT_DIR$/Pages/comp/head.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="46" selection-start-line="14" selection-start-column="46" selection-end-line="14" selection-end-column="46" />
+        <state relative-caret-position="253">
+          <caret line="11" column="82" selection-start-line="11" selection-start-column="82" selection-end-line="11" selection-end-column="82" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="115">
+          <caret line="5" column="31" lean-forward="true" selection-start-line="5" selection-start-column="31" selection-end-line="5" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Pages/fil_actu.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="275">
+          <caret line="53" column="32" selection-start-line="53" selection-start-column="32" selection-end-line="53" selection-end-column="32" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Script/filactu.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="322">
-          <caret line="126" column="30" selection-start-line="126" selection-start-column="30" selection-end-line="126" selection-end-column="30" />
+        <state relative-caret-position="522">
+          <caret line="141" column="174" selection-start-line="141" selection-start-column="174" selection-end-line="141" selection-end-column="174" />
           <folding>
             <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#2;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#button#0;n#div#0;n#div#2;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#span#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#button#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Content/Bootstrap/_variables.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="293">
+          <caret line="75" column="16" selection-start-line="75" selection-start-column="16" selection-end-line="75" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Content/sass/_myVariables.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="23">
+          <caret line="1" column="20" selection-start-line="1" selection-start-column="14" selection-end-line="1" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Pages/communaute.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="276">
+          <caret line="24" column="5" selection-start-line="24" selection-start-column="5" selection-end-line="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Content/site.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1186">
+          <caret line="45" column="18" lean-forward="true" selection-start-line="45" selection-start-column="18" selection-end-line="45" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Pages/profil.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="413">
+          <caret line="146" column="64" selection-start-line="146" selection-start-column="64" selection-end-line="146" selection-end-column="64" />
+          <folding>
+            <element signature="n#style#0;n#form#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
