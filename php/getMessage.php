@@ -6,13 +6,24 @@ $mysqli = new mysqli("localhost", "root", "", "nvtakk");
 
 $id = (isset($_GET["id"])) ? $_GET["id"] : NULL;
 
-if ($result = $mysqli->query("SELECT * from statut JOIN community ON community.id=statut.idAsso where idAsso=".$id)) {
+if ($result1 = $mysqli->query("SELECT * from statut 
+                                    JOIN community ON community.id=statut.idAsso
+                                    where idAsso=".$id." 
+                                    "
+)){
+$result2 = $mysqli->query("SELECT * from comment");
+
 
     $v = array();
-    while($row = $result->fetch_array()){
-        $v[] = $row;
+    while($row = $result1->fetch_array()){
+        $v[0][] = $row;
+    }
+
+    while($row = $result2->fetch_array()){
+        $v[1][] = $row;
     }
     echo json_encode($v);
 
-    $result->close();
+    $result1->close();
+    $result2->close();
 }

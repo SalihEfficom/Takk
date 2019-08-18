@@ -83,37 +83,7 @@ include '../Components/menu.php';
             <button class="btn btn-primary" id="change-view-btn"><i class="mdi mdi-map-marker"></i></button>
 
             <div id="join-list-view" class="visible">
-                <div class="grid-cards-container gtc300 commu-cards-container">
 
-                    <div class="card commu-card">
-                        <div class="card-header">
-                        <span class="card-title">
-                            Les mécanos de fives
-                        </span>
-                        </div>
-                        <div class="card-content">
-                            <div class="commu-infos">
-                                <span>24 membres</span>
-                                <span>Roubaix</span>
-                            </div>
-                            <div class="commu-desc">
-                                Bonjour je m'appelle Alex, j'ai 25 ans. Je suis plombier de métier et bricoleur dans
-                                l'âme.
-                                Je peux m'atterler à tout bricolage du quotidien
-                            </div>
-                            <div class="commu-keywords">
-                                #plombier #bricolage #jardinage
-                            </div>
-                        </div>
-                        <button class="btn btn-offset btn-secondary">rejoindre</button>
-                    </div>
-                    <!-- Button trigger modal -->
-                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#newCommu-modal">
-                        Launch demo modal
-                    </button>
-
-
-                </div>
             </div>
             <div id="join-card-view" class="swiper-no-swiping">
                 <div class="join-map" id="map"></div>
@@ -130,106 +100,11 @@ include '../Components/menu.php';
         <div class="swiper-slide" data-hash="slide2">
             <span class="heading">Mes créations</span>
             <div id="inner" class="grid-cards-container gtc186 commu-cards-container">
-<!--
-                <div class="card blur-card">
-                        <div class="card-header">
-                            <div class="blur-img h-100 w-100"
-                                style="background-image: url('../Content/img/mecano.jpg')"></div>
-                            <div class="circle-img" style="background-image: url('../Content/img/mecano.jpg')">
-                            </div>
-                            <span class="card-title">
-                                Les mécanos de fives
-                            </span>
-                        </div>
-                        <div class="card-content">
-                            <button class="btn btn-link">GÉRER</button>
-                        </div>
-                </div>
-                <div class="card blur-card">
-                    <div class="card-header">
-                        <div class="blur-img h-100 w-100"
-                             style="background-image: url('../Content/img/mecano.jpg')"></div>
-                        <div class="circle-img" style="background-image: url('../Content/img/mecano.jpg')">
-                        </div>
-                        <span class="card-title">
-                            Les mécanos de fives
-                        </span>
-                    </div>
-                    <div class="card-content">
-                        <button class="btn btn-link">GÉRER</button>
-                    </div>
-                </div>
-                <div class="card blur-card">
-                    <div class="card-header">
-                        <div class="blur-img h-100 w-100"
-                             style="background-image: url('../Content/img/mecano.jpg')"></div>
-                        <div class="circle-img" style="background-image: url('../Content/img/mecano.jpg')">
-                        </div>
-                        <span class="card-title">
-                            Les mécanos de fives
-                        </span>
-                    </div>
-                    <div class="card-content">
-                        <button class="btn btn-link">GÉRER</button>
-                    </div>
-                </div>
-                <div class="card blur-card">
-                    <div class="card-header">
-                        <div class="blur-img h-100 w-100"
-                             style="background-image: url('../Content/img/mecano.jpg')"></div>
-                        <div class="circle-img" style="background-image: url('../Content/img/mecano.jpg')">
-                        </div>
-                        <span class="card-title">
-                            Les mécanos de fives
-                        </span>
-                    </div>
-                    <div class="card-content">
-                        <button class="btn btn-link">GÉRER</button>
-                    </div>
-                </div> -->
+
             </div>
             <span class="heading">Mes inscriptions</span>
             <div id="innerInscription" class="grid-cards-container gtc300 commu-cards-container">
-                <!-- <div class="card large-card">
-                    <div class="large-card-img"
-                         style="background-image: url('http://s1.lprs1.fr/images/2017/10/23/7350837_1854fc40-b819-11e7-ad33-44288a1b6cac-1_1000x625.jpg')"></div>
-                    <div class="large-card-content">
-                        <div class="card-title">Lycée Robert Schumann</div>
-                        <button type="button" class="btn btn-outline-secondary">quitter</button>
-                    </div>
-                </div>
-                <div class="card large-card">
-                    <div class="large-card-img"
-                         style="background-image: url('http://s1.lprs1.fr/images/2017/10/23/7350837_1854fc40-b819-11e7-ad33-44288a1b6cac-1_1000x625.jpg')"></div>
-                    <div class="large-card-content">
-                        <div class="card-title">Lycée Robert Schumann</div>
-                        <button type="button" class="btn btn-outline-secondary">quitter</button>
-                    </div>
-                </div>
-                <div class="card large-card">
-                    <div class="large-card-img"
-                         style="background-image: url('http://s1.lprs1.fr/images/2017/10/23/7350837_1854fc40-b819-11e7-ad33-44288a1b6cac-1_1000x625.jpg')"></div>
-                    <div class="large-card-content">
-                        <div class="card-title">Lycée Robert Schumann</div>
-                        <button type="button" class="btn btn-outline-secondary">quitter</button>
-                    </div>
-                </div>
-                <div class="card large-card">
-                    <div class="large-card-img"
-                         style="background-image: url('http://s1.lprs1.fr/images/2017/10/23/7350837_1854fc40-b819-11e7-ad33-44288a1b6cac-1_1000x625.jpg')"></div>
-                    <div class="large-card-content">
-                        <div class="card-title">Lycée Robert Schumann</div>
-                        <button type="button" class="btn btn-outline-secondary">quitter</button>
-                    </div>
-                </div>
-                <div class="card large-card">
-                    <div class="large-card-img"
-                         style="background-image: url('http://s1.lprs1.fr/images/2017/10/23/7350837_1854fc40-b819-11e7-ad33-44288a1b6cac-1_1000x625.jpg')"></div>
-                    <div class="large-card-content">
-                        <div class="card-title">Lycée Robert Schumann</div>
-                        <button type="button" class="btn btn-outline-secondary">quitter</button>
-                    </div>
-                </div> -->
+
             </div>
         </div>
     </div>

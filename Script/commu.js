@@ -92,8 +92,8 @@ function getInscriptions(){
 
             });
         }else{
-            document.getElementById("falseMessage").innerHTML = getCreation.data;
-            alert('lol')
+            // document.getElementById("falseMessage").innerHTML = getCreation.data;
+            // alert('lol')
         }
       }
   }
