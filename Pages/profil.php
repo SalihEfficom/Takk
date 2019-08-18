@@ -63,13 +63,20 @@ $getInfoUser = getInfoMembre($_SESSION['mail'], $_SESSION['password']);
     top: -16px;
     font-weight: bold;
 }
+        .no-plus .menu-btn {
+            display: none;
+        }
     </style>
 </head>
 
 <body>
-<?php
-include '../Components/menu.php';
-?>
+
+<div class="no-plus">
+    <?php
+    include '../Components/menu.php';
+    ?>
+</div>
+
 <div class="profil-top-container">
 
     <div>
