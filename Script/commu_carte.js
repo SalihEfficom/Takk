@@ -75,32 +75,97 @@ function zoomVille(address) {
 }
 
 function markerVille(geocoder,myfunc) {
-    var xhr = new XMLHttpRequest();
 
-    xhr.open("GET", "../php/createMarker.php?", true);
-    xhr.send();
+    jQuery.ajax({
+        url:"../php/createMarker.php?",
+        type:"GET",
+        async:false,
+        crossDomain:true,
+        success:function(data){
+            var d = JSON.parse(data);
 
-    xhr.onreadystatechange = function() {
-        let data = JSON.parse(xhr.response);
+            for (let i=0; i<d.length; i++) {
+                nom[i] = d[i].name;
+                desc[i] = d[i].description;
+                mot[i] = d[i].keyword;
+                id[i] = d[i].id;
+                geocoder.geocode( { 'address': d[i].city}, function(results, status) {
+                    if (status == google.maps.GeocoderStatus.OK) {
+                        newAddress = results[0].geometry.location;
+                        latlng = new google.maps.LatLng(parseFloat(newAddress.lat()), parseFloat(newAddress.lng()));
+                        geoVille = results[0].address_components[0].short_name;
 
-        for (let i=0; i<data.length; i++) {
-            nom[i] = data[i].name;
-            desc[i] = data[i].description;
-            mot[i] = data[i].keyword;
-            id[i] = data[i].id;
-            geocoder.geocode( { 'address': data[i].city}, function(results, status) {
-                if (status == google.maps.GeocoderStatus.OK) {
-                    console.log(i);
-                    newAddress = results[0].geometry.location;
-                    latlng = new google.maps.LatLng(parseFloat(newAddress.lat()), parseFloat(newAddress.lng()));
-                    geoVille = results[0].address_components[0].short_name;
-                    console.log(nom[i]);
+                        myfunc(latlng, geoVille, nom[i], desc[i], mot[i],id[i]);
+                    }
+                });
 
-                    myfunc(latlng, geoVille, nom[i], desc[i], mot[i],id[i]);
-                }
-            });
+                document.getElementById("join-list-view").innerHTML+=
+                    "<div class=\"grid-cards-container gtc300 commu-cards-container\">" +
+                    "                    <div class=\"card commu-card\">" +
+                    "                        <div class=\"card-header\">" +
+                    "                        <span class=\"card-title\">" +
+                    "                            "+d[i][1]+
+                    "                        </span>" +
+                    "                        </div>" +
+                    "                        <div class=\"card-content\">" +
+                    "                            <div class=\"commu-infos\">" +
+                    "                                <span>"+d[i].city+"</span>" +
+                    "                            </div>" +
+                    "                            <div class=\"commu-desc\">" +
+                    "                                "+d[i].description+
+                    "                            </div>\n" +
+                    "                            <div class=\"commu-keywords\">" +
+                    "                                #"+d[i].keyword+
+                    "                            </div>" +
+                    "                        </div>" +
+                    "                        <div id='blocButton"+d[i].id+"'></div>" +
+                    "                    </div>" +
+                    "                </div>";
+
+                jQuery.ajax({
+                    url:"../php/checkCommu.php?id="+d[i].id,
+                    type:"GET",
+                    async:false,
+                    crossDomain:true,
+                    success:function(data){
+                        var dt = JSON.parse(data);
+                        console.log(dt);
+                        if(dt=="non"){
+                            document.getElementById("blocButton"+d[i].id).innerHTML+="<button class=\"btn btn-offset btn-secondary\" onclick='joinCommu("+d[i].id+")'>Rejoindre</button>";
+                        }
+                    },
+                    error:function(data){
+
+                    }
+                });
+
+            }
+        },
+        error:function(data){
+
         }
-    }
+    });
+
+    // jQuery.ajax({
+    //     url:"../php/checkCommu.php?id="+data[i].id,
+    //     type:"GET",
+    //     async:false,
+    //     crossDomain:true,
+    //     success:function(data){
+    //         // var dt = JSON.parse(data);
+    //         console.log('tetetst    as')
+    //         console.log(data);
+    //         if(data=="non"){
+    //             console.log('test');
+    //             document.getElementById("blocButton").innerHTML+="<button class=\"btn btn-offset btn-secondary\" onclick='joinCommu()'>Rejoindre</button>";
+    //         }
+    //     },
+    //     error:function(data){
+    //
+    //     }
+    // });
+
+
 }
 
 function createMarker(latlng,ville,nom,desc,mot) {
@@ -166,32 +231,80 @@ function searchMotCle(){
     setMapOnAll(null);
     var motcle = encodeURIComponent(document.getElementById("input_commu").value);
 
-    var xhr = new XMLHttpRequest();
+    console.log(motcle)
 
-    xhr.open("GET", "../php/markerMotCle.php?motcle="+motcle, true);
-    xhr.send();
-    xhr.onreadystatechange = function() {
-        let dataV = JSON.parse(xhr.response);
-        var geocoder = new google.maps.Geocoder();
+    jQuery.ajax({
+        url:"../php/../php/markerMotCle.php?motcle="+motcle,
+        type:"GET",
+        async:false,
+        crossDomain:true,
+        success:function(data){
+            console.log(typeof data)
+            // var sdata = JSON.stringify(data);
+            var d = JSON.parse(data);
+            for (let i=0; i<d.length; i++) {
+                nom[i] = d[i].name;
+                desc[i] = d[i].description;
+                mot[i] = d[i].keyword;
+                id[i] = d[i].id;
+                geocoder.geocode( { 'address': d[i].city}, function(results, status) {
+                    if (status == google.maps.GeocoderStatus.OK) {
+                        newAddress = results[0].geometry.location;
+                        var latlng = new google.maps.LatLng(parseFloat(newAddress.lat()),parseFloat(newAddress.lng()));
+                        geoVille = results[0].address_components[0].short_name;
+                        createMarkerMotCle(latlng,geoVille,nom[i],desc[i],mot[i],id[i]);
+                    }
+                });
 
-        console.log(dataV);
+                document.getElementById("join-list-view").innerHTML="";
 
-        for (let i=0; i<dataV.length; i++) {
-            nom[i] = dataV[i].name;
-            desc[i] = dataV[i].description;
-            mot[i] = dataV[i].keyword;
-            id[i] = dataV[i].id;
-            var newAddress;
-            geocoder.geocode( { 'address': dataV[i].city }, function(results, status) {
-                if (status == google.maps.GeocoderStatus.OK) {
-                    newAddress = results[0].geometry.location;
-                    var latlng = new google.maps.LatLng(parseFloat(newAddress.lat()),parseFloat(newAddress.lng()));
-                    geoVille = results[0].address_components[0].short_name;
-                    createMarkerMotCle(latlng,geoVille,nom[i],desc[i],mot[i],id[i]);
-                }
-            });
+                document.getElementById("join-list-view").innerHTML+=
+                    "<div class=\"grid-cards-container gtc300 commu-cards-container\">" +
+                    "                    <div class=\"card commu-card\">" +
+                    "                        <div class=\"card-header\">" +
+                    "                        <span class=\"card-title\">" +
+                    "                            <a href='http://localhost/Takk/Pages/fildactu.php?id="+d[i][1]+"'>"+d[i][1]+"</a>"+
+                    "                        </span>" +
+                    "                        </div>" +
+                    "                        <div class=\"card-content\">" +
+                    "                            <div class=\"commu-infos\">" +
+                    "                                <span>"+d[i].city+"</span>" +
+                    "                            </div>" +
+                    "                            <div class=\"commu-desc\">" +
+                    "                                "+d[i].description+
+                    "                            </div>\n" +
+                    "                            <div class=\"commu-keywords\">" +
+                    "                                #"+d[i].keyword+
+                    "                            </div>" +
+                    "                        </div>" +
+                    "                        <div id='blocButton"+d[i].id+"'></div>" +
+                    "                    </div>" +
+                    "                </div>";
+
+                jQuery.ajax({
+                    url:"../php/checkCommu.php?id="+d[i].id,
+                    type:"GET",
+                    async:false,
+                    crossDomain:true,
+                    success:function(data){
+                        var dt = JSON.parse(data);
+                        console.log(dt);
+                        if(dt=="non"){
+                            document.getElementById("blocButton"+d[i].id).innerHTML+="<button class=\"btn btn-offset btn-secondary\" onclick='joinCommu("+d[i].id+")'>Rejoindre</button>";
+                        }
+                    },
+                    error:function(data){
+                    }
+                });
+
+            }
+        },
+        error:function(data){
+            console.log('echec')
+
         }
-    }
+    });
+
 }
 
 function setMapOnAll(map) {
@@ -223,7 +336,6 @@ function check(){
             break;
         }
     }
-    console.log("gergeg")
     document.getElementById("buttonvalide").disabled = !allFilled;
 }
 
@@ -258,20 +370,24 @@ function verifText(){
     let vdescription = document.getElementById('description').value;
     if(vnom.length > 0 && vville.length > 0 && vmotcle.length && vdescription.length > 0 ) {
         document.getElementById('buttonvalide').disabled = false;
-        console.log('ge');
-        console.log(vnom.length);
-        console.log(vville.length);
-        console.log(vmotcle.length);
-        console.log(vdescription.length);
     } else {
         document.getElementById('buttonvalide').disabled = true;
 
-        console.log('aezze');
-        console.log(vnom.length);
-        console.log(vville.length);
-        console.log(vmotcle.length);
-        console.log(vdescription.length);
 
     }
+}
+
+function joinCommu(id){
+    jQuery.ajax({
+        url:"../php/joinCommu.php?idAsso="+id,
+        type:"GET",
+        async:false,
+        crossDomain:true,
+        success:function(data){
+            location.reload();
+        },
+        error:function(data){
+        }
+    });
 }
 

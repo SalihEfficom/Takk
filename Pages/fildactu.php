@@ -49,7 +49,7 @@
 <div class="swiper-container">
     <div class="swiper-wrapper">
         <div id="bloc1" class="swiper-slide " data-hash="slide1" style="padding-top: 40px;">
-
+            <span id="bloc1-span"></span>
         </div>
         <div id="bloc2" class="swiper-slide" data-hash="slide2">
 
