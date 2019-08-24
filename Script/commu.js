@@ -18,51 +18,49 @@
 // }
 
 window.addEventListener("DOMContentLoaded", (event) => {
-    // getCreation();
+    getCreation();
     getInscriptions();
 });
 
-//
-// function getCreation(){
-//
-//   var xhr = getXMLHttpRequest();
-//
-//   xhr.open("GET", "../php/getCreation.php?", true);
-//
-//   xhr.onreadystatechange = function()
-//   {
-//       if(xhr.readyState == 4 && (xhr.status == 200 || xhr.status == 0)) {
-//         getCreation = JSON.parse(xhr.responseText);
-//
-//         if(getCreation.success){
-//             getCreation.data.forEach(function(element) {
-//                 // console.log(element);
-//
-//                 var content = `<div class="card blur-card">
-//                 <div class="card-header">
-//                     <div class="blur-img h-100 w-100"
-//                          style="background-image: url('../Content/img/mecano.jpg')"></div>
-//                     <div class="circle-img" style="background-image: url('../Content/img/mecano.jpg')">
-//                     </div>
-//                     <span class="card-title">
-//                         ${element.name}
-//                     </span>
-//                 </div>
-//                 <div class="card-content">
-//                     <button class="btn btn-link">GÉRER</button>
-//                 </div>`;
-//
-//                 $( "#inner" ).append(content);
-//
-//
-//               });
-//         }else{
-//             document.getElementById("falseMessage").innerHTML = getCreation.data;
-//         }
-//       }
-//   }
-//   xhr.send(null);
-// }
+
+function getCreation(){
+
+  var xhr = getXMLHttpRequest();
+
+  xhr.open("GET", "../php/getCreation.php?", true);
+  xhr.onreadystatechange = function()
+  {
+      if(xhr.readyState == 4 && (xhr.status == 200 || xhr.status == 0)) {
+        getCreation = JSON.parse(xhr.responseText);
+        if(getCreation.success){
+            getCreation.data.forEach(function(element) {
+                // console.log(element);
+
+                var content = `<div class="card blur-card">
+                <div class="card-header">
+                    <div class="blur-img h-100 w-100"
+                         style="background-image: url('../Content/img/mecano.jpg')"></div>
+                    <div class="circle-img" style="background-image: url('../Content/img/mecano.jpg')">
+                    </div>
+                    <span class="card-title">
+                        ${element.name}
+                    </span>
+                </div>
+                <div class="card-content">
+                    <button class="btn btn-link">GÉRER</button>
+                </div>`;
+
+                $( "#inner" ).append(content);
+
+
+              });
+        }else{
+            document.getElementById("falseMessage").innerHTML = getCreation.data;
+        }
+      }
+  }
+  xhr.send(null);
+}
 
 
 function getInscriptions(){
@@ -75,6 +73,7 @@ function getInscriptions(){
   {
       if(xhr.readyState == 4 && (xhr.status == 200 || xhr.status == 0)) {
         getCreation = JSON.parse(xhr.responseText);
+        console.log(getCreation);
         if(getCreation.success){
             getCreation.data.forEach(function(element) {
 
@@ -94,6 +93,7 @@ function getInscriptions(){
         }else{
             // document.getElementById("falseMessage").innerHTML = getCreation.data;
             // alert('lol')
+           // alert('lol')
         }
       }
   }

@@ -22,7 +22,7 @@ if ($result = $mysqli->query("SELECT c.name,c.admin,mc.idUser from community c i
             $row = $result->fetch_all(PDO::FETCH_LAZY);
             $rowCounts = $result->num_rows;
             if($rowCounts == 0){
-                $data = array("success" => false,"data" =>"Vous n'avez actuellement rejoin à aucune communautés de crées.");
+                $data = array("success" => false,"data" =>"Vous n'avez actuellement rejoins à aucune communautés de crées.");
             }else{
                 $data = array("success" => true,"data" =>$row);
             }
