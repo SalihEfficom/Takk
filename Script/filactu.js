@@ -60,8 +60,7 @@ window.addEventListener("DOMContentLoaded", (event) => {
                 // console.log(d[1][i]);
                 // console.log(i);
                 //LE PROBLEME EST QUE LE TABLEAU D[0] EST PLUS GRAND QUE D[1] DONC AU BOUT DUN MOMENT IL NE TROUVE PAS LA SUITE DU TABLEAU D[1] PARCE QUE ELLE NEXISTE PAS
-                console.log(d[0]);
-                console.log(d[1]);
+
                 for(var x=0;x<d[1].length;++x) {
                     if (typeof d[0][x] !== 'undefined' && typeof d[1][x] !== 'undefined') {
                         if (d[1][x][4] == d[0][i][0]) {
@@ -93,8 +92,8 @@ window.addEventListener("DOMContentLoaded", (event) => {
                 bloc2 += "<div class=\"commu-cards-container\">" +
                     "                <div class=\"card\" id=\"card\">" +
                     "                    <div class=\"card-header card-header-actu\">" +
-                    "                            <span class=\"card-title card-title-actu\" style=\"color: #0054AA;\">" +
-                    "                                "+d[i].prenom+" "+d[i].nom+
+                    "                            <a class=\"card-title card-title-actu\" style=\"color: #0054AA;\">" +
+                    "                               <a href='http://localhost/Takk/Pages/profil_user.php?id="+d[i][0]+"' >"+d[i].prenom+" "+d[i].nom+"</a>"+
                     "                            </span>" +
                     "                    </div>" +
                     "                    <div class=\"card-content\">" +
