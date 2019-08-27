@@ -104,7 +104,7 @@ function markerVille(geocoder,myfunc) {
                     "                    <div class=\"card commu-card\">" +
                     "                        <div class=\"card-header\">" +
                     "                        <span class=\"card-title\">" +
-                    "                            "+d[i][1]+
+                    "                            <a href='http://localhost/Takk/Pages/fildactu.php?id="+d[i][0]+"'>"+d[i][1]+"</a>"+
                     "                        </span>" +
                     "                        </div>" +
                     "                        <div class=\"card-content\">" +
@@ -263,7 +263,7 @@ function searchMotCle(){
                     "                    <div class=\"card commu-card\">" +
                     "                        <div class=\"card-header\">" +
                     "                        <span class=\"card-title\">" +
-                    "                            <a href='http://localhost/Takk/Pages/fildactu.php?id="+d[i][1]+"'>"+d[i][1]+"</a>"+
+                    "                            <a href='http://localhost/Takk/Pages/fildactu.php?id="+d[i][0]+"'>"+d[i][1]+"</a>"+
                     "                        </span>" +
                     "                        </div>" +
                     "                        <div class=\"card-content\">" +
