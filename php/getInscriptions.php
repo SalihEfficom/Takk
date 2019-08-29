@@ -18,7 +18,7 @@ function getInscriptions($mail,$mdp){
     if(isset($mail,$mdp)){
         $mysqli = new mysqli("localhost", "root", "", "nvtakk");
         $getInfoUser = getInfoMembre($_SESSION['mail'], $_SESSION['password']);
-if ($result = $mysqli->query("SELECT c.name,c.admin,mc.idUser from community c inner join user_community mc on c.id= mc.idCommunity inner join user u on u.id=mc.idUser where mc.idUser =".$getInfoUser['id']." and c.admin !=".$getInfoUser['id'])) {
+if ($result = $mysqli->query("SELECT c.id as idCommunity,c.name,c.admin,mc.idUser from community c inner join user_community mc on c.id= mc.idCommunity inner join user u on u.id=mc.idUser where mc.idUser =".$getInfoUser['id']." and c.admin !=".$getInfoUser['id'])) {
             $row = $result->fetch_all(PDO::FETCH_LAZY);
             $rowCounts = $result->num_rows;
             if($rowCounts == 0){
