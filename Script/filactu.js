@@ -13,7 +13,6 @@ window.addEventListener("DOMContentLoaded", (event) => {
         crossDomain:true,
         success:function(data){
             var d = JSON.parse(data);
-            // console.log(d);
             if(d=="non"){
                 document.getElementById("blocButton").innerHTML="<button id=\"joinCommu\" onclick=\"joinCommu()\">Rejoindre</button>";
             }
@@ -52,22 +51,12 @@ window.addEventListener("DOMContentLoaded", (event) => {
                     "                </div>" +
                     "            </div>";
 
-                // for(var x=0;x<d[1].length;++x){
-
-                // }
                 jQuery("#bloc1-span").after(bloc);
-                // document.getElementById("bloc1").innerHTML=bloc;
-                // console.log(d[1][i]);
-                // console.log(i);
-                //LE PROBLEME EST QUE LE TABLEAU D[0] EST PLUS GRAND QUE D[1] DONC AU BOUT DUN MOMENT IL NE TROUVE PAS LA SUITE DU TABLEAU D[1] PARCE QUE ELLE NEXISTE PAS
 
                 for(var x=0;x<d[1].length;++x) {
                     if (typeof d[0][x] !== 'undefined' && typeof d[1][x] !== 'undefined') {
                         if (d[1][x][4] == d[0][i][0]) {
-                            // console.log(d[1][i]);
-                            // console.log(document.getElementById("card-content" + i));
                             jQuery("#card-content" + d[0][i][0]).after("<p>" + d[1][x][1] + " " + d[1][x][3] + "</p>");
-                            // console.log(document.getElementById("card-content" + i));
                         }
                     }
                 }
@@ -98,13 +87,13 @@ window.addEventListener("DOMContentLoaded", (event) => {
                     "                    </div>" +
                     "                    <div class=\"card-content\">" +
                     "                        <div class=\"commu-infos\">" +
-                    "                            <span>AJOUTER UNE DESCRIPTION DANS LE PROFIL</span>" +
+                    "                            <span>"+d[i][6]+"</span>" +
                     "                        </div>" +
                     "                        <div class=\"commu-desc\" >" +
-                    "                            <span id=\"bloc2\"></span>" +
+                    "                            <span id=\"bloc2\">"+d[i][3]+"</span>" +
                     "                        </div>" +
                     "                        <div class=\"commu-keywords\">" +
-                    "                            AJOUTER DES MOT CLE DANS LE PROFIL" +
+                    "                            "+
                     "                        </div>" +
                     "                    </div>" +
                     "                </div>" +
