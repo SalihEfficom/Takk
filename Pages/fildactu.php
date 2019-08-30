@@ -24,7 +24,6 @@
 ?>
 
 <!---------------------------------------------------------------------------------->
-<div data-include="./comp/menu.html"></div>
 <div id="blocheader" style="margin: 5px;
     border-radius: 5px;
     height: 100px;

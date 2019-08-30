@@ -12,13 +12,13 @@ window.addEventListener("DOMContentLoaded", (event) => {
             for(var i=0;i<d.length;++i){
                 if(d[i].isAccepted==null){
                     // msg="Vous avez "+d[i][18]+" contrats en attente";
-                    msg="<p>Contrats : Avec "+d[i][8]+" "+d[i][9]+" le "+d[i][3]+"</p>"
+                    msg="<div class='card' style='margin-bottom: 20px;'> <div class='card-header'>Contrats : Avec "+d[i][8]+" "+d[i][9]+" le "+d[i][3]+"</div> "
                     msg+="<button id='btnValider' onclick='valideContrat("+d[i][0]+")'>V</button>"
-                    msg+="<button id='btnValider' onclick='deleteContrat("+d[i][0]+")'>X</button>"
+                    msg+="<button id='btnRefuser' onclick='deleteContrat("+d[i][0]+")'>X</button> </div>"
                 }
 
                 if(d[i].isAccepted==1){
-                    contrats+="<div id=\"contratAccepte\">Vous avez passé 1 contrat</div><br />";
+                    contrats+="<div class='card' style='padding: 10px' id=\"contratAccepte\">Vous avez accepté ce contrat</div><br />";
                 }
                 contrats  += "<div id=\"contratAttente\">"+msg+"</div>"
             }
