@@ -37,6 +37,9 @@ window.addEventListener("DOMContentLoaded", (event) => {
                     "                <div class=\"card\">" +
                     "                    <div id=\"card-content"+d[0][i][0]+"\" class=\"card-content\">" +
                     "                        <div class=\"commu-infos\">" +
+                    "                            <span>"+d[0][i].title+"</span>" +
+                    "                        </div>" +
+                    "                        <div class=\"commu-infos\">" +
                     "                            <span>"+d[0][i].txtContent+"</span>" +
                     "                        </div>" +
                     "                        <div class=\"commu-desc\" >" +

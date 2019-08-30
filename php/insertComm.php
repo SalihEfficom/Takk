@@ -19,8 +19,7 @@ $uev = (isset($_GET["uev"])) ? $_GET["uev"] : NULL;
 $id = (isset($_GET["id"])) ? $_GET["id"] : NULL;
 $motcle= (isset($_GET["motcle"])) ? $_GET["motcle"] : NULL;
 
-$result = $mysqli->query("INSERT INTO statut(title,txtContent,idAuthor,uevValue,idAsso,motcle) VALUES('" . $titre . "','" . $contenu . "',". $getInfoUser['id'] .",". $uev.",".$id.",'".$motcle."')");
-
+$result = $mysqli->query('INSERT INTO statut(title,txtContent,idAuthor,uevValue,idAsso,motcle) VALUES("' . $titre . '","' . $contenu . '",'. $getInfoUser['id'] .','. $uev.','.$id.',"'.$motcle.'")');
 
 $result->close();
 
