@@ -79,6 +79,7 @@ $contrat = false;
                     <input class="in mb-3" type="text" placeholder="Titre" id="titre">
                     <textarea class="mb-3" name="contenuMess" id="contenu"
                               placeholder="Votre message... "></textarea>
+                    <input type="text" placeholder="Mot clé" id="motcle">
                     <input type="text" placeholder="UEV" id="uevValue">
                     <?php
                 }
