@@ -131,7 +131,7 @@ function sendComment(id){
     });
 
     jQuery('#repMessage'+id).attr("disabled", false);
-    jQuery('#card-content'+id).after('<p>'+jQuery('#comment'+id).val()+'</p>');
+    jQuery('#card-content'+id).after('<p class="comment">'+jQuery('#comment'+id).val()+'</p>');
     jQuery('#comment'+id).remove();
     jQuery('#commentButton'+id).remove();
 }

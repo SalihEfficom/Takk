@@ -16,6 +16,21 @@
             crossorigin="anonymous"></script>
     <script src="../Script/fonctionxmlhttp.js"></script>
     <script src="../Script/filactu.js"></script>
+    <style>
+        .comment {
+            margin: 10px 0;
+            background: #0054aa2e;
+            padding: 16px;
+            border-radius: 4px;
+            outline: 11px #eeeeee solid;
+            border-left: 34px #eeeeee solid;
+            text-align: right;
+        }
+
+        .comment:last-child {
+            margin-bottom: 0;
+        }
+    </style>
 </head>
 <body>
 
