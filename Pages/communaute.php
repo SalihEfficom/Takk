@@ -32,7 +32,7 @@ $getInfoUser = getInfoMembre($_SESSION['mail'],$_SESSION['password']);
     <script type="text/javascript" src="../Script/fonctionxmlhttp.js"></script>
     <script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js"></script>
     <script src="../Script/commu_carte.js"></script>
-    <script defer src="../Script/commu.js"></script>
+    <script src="../Script/commu.js"></script>
     <script src="../Script/fonctionxmlhttp.js"></script>
 
 
@@ -104,7 +104,7 @@ include '../Components/menu.php';
             </div>
             <span class="heading">Mes inscriptions</span>
             <div id="innerInscription" class="grid-cards-container gtc300 commu-cards-container">
-
+                <div id="insert"></div>
             </div>
         </div>
     </div>
@@ -147,7 +147,7 @@ include '../Components/menu.php';
         document.getElementById("join-card-view").classList.toggle("visible");
         this.classList.toggle("flip");
         document.querySelector('#change-view-btn i').classList.toggle('mdi-view-sequential');
-    }, false);
+    }, false);  
 </script>
 <!---------------------------------------------------------------------------------->
 <!-- Swiper JS -->

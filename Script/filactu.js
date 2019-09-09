@@ -117,7 +117,7 @@ window.addEventListener("DOMContentLoaded", (event) => {
 function comment(id){
     jQuery('comment'+id).remove();
     jQuery('commentButton'+id).remove();
-    jQuery('#card-content'+id).after('<textarea placeholder="Veuillez saisir votre message" id="comment'+id+'"></textarea><button id="commentButton'+id+'" onclick="sendComment('+id+')">Valider</button>');
+    jQuery('#card-content'+id).after('<textarea placeholder="Veuillez saisir votre message" id="comment'+id+'"></textarea><button class="btn btn-primary" id="commentButton'+id+'" onclick="sendComment('+id+')">Valider</button>');
     jQuery('#repMessage'+id).attr("disabled", true);
 }
 
