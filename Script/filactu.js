@@ -58,13 +58,24 @@ window.addEventListener("DOMContentLoaded", (event) => {
                     "            </div>";
 
                 jQuery("#bloc1-span").after(bloc);
-
+                console.log(d);
+                console.log(d[1].length);
                 for(var x=0;x<d[1].length;++x) {
-                    if (typeof d[0][x] !== 'undefined' && typeof d[1][x] !== 'undefined') {
+
+                    // if (typeof d[0][x] !== 'undefined' && typeof d[1][x] !== 'undefined') {
+                        console.log('testifififif');
+                        console.log('if1 : '+d[1][x][4]);
+                        console.log('if2 : '+d[0][i][0]);
                         if (d[1][x][4] == d[0][i][0]) {
-                            jQuery("#card-content" + d[0][i][0]).after("<p>" + d[1][x][1] + " " + d[1][x][3] + "</p>");
+                            console.log('testestest');
+                            jQuery("#card-content" + d[0][i][0]).after("<p style='position: relative;' class='comment'>" + d[1][x][1] + " <span style='position: absolute;\n" +
+                                "    width: fit-content;\n" +
+                                "    right: 122px;\n" +
+                                "    color: #0054aa69;\n" +
+                                "    font-size: 11gitpx;\n" +
+                                "    top: 2px;' class='comment-date'>" +  d[1][x][3] + "</span></p>");
                         }
-                    }
+                    // }
                 }
             }
         },
